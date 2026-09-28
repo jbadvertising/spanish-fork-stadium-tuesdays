@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish Fork Stadium Tuesdays</title>
+<style>
+  :root {
+    --bg: #0a0a10;
+    --card: #15151f;
+    --card-border: #262633;
+    --text: #f2f0ea;
+    --muted: #a9a7b8;
+    --accent: #e50914;
+    --gold: #f5c518;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(1200px 600px at 50% -10%, #1a1a28 0%, var(--bg) 60%) fixed, var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    padding: 0 16px 64px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header { text-align: center; padding: 44px 0 8px; }
+  header .kicker {
+    color: var(--gold); font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+  header h1 { font-size: clamp(28px, 5vw, 44px); letter-spacing: 1px; }
+  header h1 .xd { color: var(--accent); }
+  header p.sub { color: var(--muted); margin-top: 10px; font-size: 15px; }
+  #checked {
+    text-align: center; color: var(--muted); font-size: 13px;
+    margin: 14px 0 30px;
+  }
+  #checked .dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: #37d67a; margin-right: 6px;
+  }
+  .day { margin-bottom: 44px; }
+  .day-head {
+    display: flex; align-items: baseline; gap: 12px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .day-head h2 { font-size: 22px; }
+  .day-head .count {
+    color: var(--muted); font-size: 14px;
+  }
+  .grid {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 12px; overflow: hidden;
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .card:hover { transform: translateY(-3px); border-color: #3a3a4d; }
+  .poster {
+    aspect-ratio: 2/3; background: #0d0d14;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 13px; text-align: center; padding: 12px;
+  }
+  .poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .info { padding: 12px 12px 14px; }
+  .info .title { font-size: 14px; font-weight: 600; line-height: 1.3; min-height: 36px; }
+  .info .time { font-size: 20px; font-weight: 700; margin-top: 8px; color: #fff; }
+  .badge {
+    display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 700;
+    letter-spacing: 1px; color: #0a0a10; background: var(--gold);
+    border-radius: 6px; padding: 3px 8px; text-transform: uppercase;
+  }
+  #loading, #error { text-align: center; padding: 60px 20px; color: var(--muted); }
+  #error { display: none; }
+  #error .panel {
+    display: inline-block; background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 12px; padding: 28px 36px;
+  }
+  #error h3 { color: var(--text); margin-bottom: 8px; }
+  #retry {
+    margin-top: 16px; background: var(--accent); color: #fff; border: 0;
+    border-radius: 8px; padding: 10px 22px; font-size: 15px; font-weight: 600;
+    cursor: pointer;
+  }
+  #retry:hover { filter: brightness(1.15); }
+  .spinner {
+    width: 42px; height: 42px; margin: 0 auto 16px; border-radius: 50%;
+    border: 4px solid var(--card-border); border-top-color: var(--accent);
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  footer {
+    text-align: center; color: var(--muted); font-size: 12px;
+    margin-top: 40px; line-height: 1.7;
+  }
+  .empty { text-align: center; color: var(--muted); padding: 30px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Cinemark Spanish Fork <span class="xd">&amp; XD</span></div>
+    <h1>Tuesday Stadium Showtimes</h1>
+    <p class="sub">Auditoriums 10 &amp; 11 &middot; strictly after 4:00 PM &middot; no 3D</p>
+  </header>
+  <div id="checked" style="display:none"><span class="dot"></span><span id="checked-text"></span></div>
+
+  <div id="loading"><div class="spinner"></div>Loading showtimes&hellip;</div>
+
+  <div id="error">
+    <div class="panel">
+      <h3>Couldn&rsquo;t load showtimes</h3>
+      <p>Check your connection and try again.</p>
+      <button id="retry" onclick="load()">Retry</button>
+    </div>
+  </div>
+
+  <main id="board"></main>
+
+  <footer>
+    Data refreshes automatically about every 6 hours.<br>
+    Cinemark Spanish Fork and XD &middot; 595 East Commerce Way, Spanish Fork, UT
+  </footer>
+</div>
+
+<script>
+const DATA_URL = "https://gist.githubusercontent.com/jbadvertising/0c9d5bb8db621759b8ef910b047b6083/raw/showtimes.json";
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+
+function fmtDate(iso) {
+  const d = new Date(iso + "T12:00:00");
+  return d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+}
+
+function fmtChecked(iso) {
+  const d = new Date(iso);
+  return "Last checked " + d.toLocaleDateString("en-US", { month: "short", day: "numeric" }) +
+         " at " + d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+}
+
+function render(data) {
+  const board = document.getElementById("board");
+  board.innerHTML = "";
+  if (!data.tuesdays || data.tuesdays.length === 0) {
+    board.innerHTML = '<div class="empty">No stadium-seating Tuesday showtimes posted right now.</div>';
+    return;
+  }
+  for (const day of data.tuesdays) {
+    const sec = document.createElement("section");
+    sec.className = "day";
+    const n = day.showtimes.length;
+    sec.innerHTML =
+      '<div class="day-head"><h2>' + esc(fmtDate(day.tuesday_date)) + '</h2>' +
+      '<span class="count">' + n + (n === 1 ? " showtime" : " showtimes") + '</span></div>' +
+      '<div class="grid">' + day.showtimes.map(s => {
+        const poster = s.poster
+          ? '<img src="' + esc(s.poster) + '" alt="" loading="lazy">'
+          : '<span>No poster</span>';
+        return '<article class="card">' +
+          '<div class="poster">' + poster + '</div>' +
+          '<div class="info"><div class="title">' + esc(s.movie) + '</div>' +
+          '<div class="time">' + esc(s.time) + '</div>' +
+          '<span class="badge">Stadium &middot; Aud ' + esc(s.auditorium) + '</span></div></article>';
+      }).join("") + '</div>';
+    board.appendChild(sec);
+  }
+}
+
+async function load() {
+  const loading = document.getElementById("loading");
+  const error = document.getElementById("error");
+  const checked = document.getElementById("checked");
+  loading.style.display = "block";
+  error.style.display = "none";
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    render(data);
+    if (data.checked_at) {
+      document.getElementById("checked-text").textContent = fmtChecked(data.checked_at);
+      checked.style.display = "block";
+    }
+    loading.style.display = "none";
+  } catch (e) {
+    loading.style.display = "none";
+    error.style.display = "block";
+  }
+}
+
+load();
+</script>
+</body>
+</html>
