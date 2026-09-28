@@ -39,6 +39,17 @@
     display: inline-block; width: 8px; height: 8px; border-radius: 50%;
     background: #37d67a; margin-right: 6px;
   }
+  #sortbar {
+    display: flex; gap: 8px; justify-content: center; margin: 0 0 26px;
+  }
+  .sortbtn {
+    background: var(--card); color: var(--muted); border: 1px solid var(--card-border);
+    border-radius: 999px; padding: 8px 22px; font-size: 14px; font-weight: 600;
+    cursor: pointer;
+  }
+  .sortbtn.active { background: var(--gold); color: #0a0a10; border-color: var(--gold); }
+  .date-line { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .added { font-size: 12px; color: var(--gold); margin-top: 8px; }
   .day { margin-bottom: 44px; }
   .day-head {
     display: flex; align-items: baseline; gap: 12px;
@@ -108,6 +119,11 @@
   </header>
   <div id="checked" style="display:none"><span class="dot"></span><span id="checked-text"></span></div>
 
+  <div id="sortbar" style="display:none">
+    <button id="sort-date" class="sortbtn active" onclick="setSort('date')">By date</button>
+    <button id="sort-newest" class="sortbtn" onclick="setSort('newest')">Newest first</button>
+  </div>
+
   <div id="loading"><div class="spinner"></div>Loading showtimes&hellip;</div>
 
   <div id="error">
@@ -146,7 +162,15 @@ function fmtChecked(iso) {
          " at " + d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
 }
 
-function render(data) {
+function fmtAdded(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+let cachedData = null;
+let sortMode = "date";
+
+function renderByDate(data) {
   const board = document.getElementById("board");
   board.innerHTML = "";
   if (!data.tuesdays || data.tuesdays.length === 0) {
@@ -174,12 +198,66 @@ function render(data) {
   }
 }
 
+function renderNewest(data) {
+  const board = document.getElementById("board");
+  board.innerHTML = "";
+  const all = [];
+  for (const day of data.tuesdays || []) {
+    for (const s of day.showtimes) all.push({ date: day.tuesday_date, s: s });
+  }
+  if (all.length === 0) {
+    board.innerHTML = '<div class="empty">No stadium-seating Tuesday showtimes posted right now.</div>';
+    return;
+  }
+  all.sort(function (a, b) {
+    return String(b.s.first_seen || "").localeCompare(String(a.s.first_seen || "")) ||
+           a.date.localeCompare(b.date) ||
+           String(a.s.time).localeCompare(String(b.s.time));
+  });
+  const n = all.length;
+  const sec = document.createElement("section");
+  sec.className = "day";
+  sec.innerHTML =
+    '<div class="day-head"><h2>Newest additions</h2>' +
+    '<span class="count">' + n + (n === 1 ? " showtime" : " showtimes") + '</span></div>' +
+    '<div class="grid">' + all.map(function (item) {
+      const date = item.date, s = item.s;
+      const poster = s.poster
+        ? '<img src="' + esc(s.poster) + '" alt="" loading="lazy">'
+        : '<span>No poster</span>';
+      return '<article class="card">' +
+        '<div class="poster">' + poster + '</div>' +
+        '<div class="info">' +
+        '<div class="date-line">' + esc(fmtDate(date)) + '</div>' +
+        '<div class="title">' + esc(s.movie) + '</div>' +
+        '<div class="time">' + esc(s.time) + '</div>' +
+        '<span class="badge">Stadium &middot; Aud ' + esc(s.auditorium) + '</span>' +
+        (s.first_seen ? '<div class="added">Added ' + esc(fmtAdded(s.first_seen)) + '</div>' : "") +
+        '</div></article>';
+    }).join("") + '</div>';
+  board.appendChild(sec);
+}
+
+function render(data) {
+  cachedData = data;
+  if (sortMode === "newest") renderNewest(data); else renderByDate(data);
+}
+
+function setSort(mode) {
+  sortMode = mode;
+  document.getElementById("sort-date").classList.toggle("active", mode === "date");
+  document.getElementById("sort-newest").classList.toggle("active", mode === "newest");
+  if (cachedData) render(cachedData);
+}
+
 async function load() {
   const loading = document.getElementById("loading");
   const error = document.getElementById("error");
   const checked = document.getElementById("checked");
+  const sortbar = document.getElementById("sortbar");
   loading.style.display = "block";
   error.style.display = "none";
+  sortbar.style.display = "none";
   try {
     const res = await fetch(DATA_URL, { cache: "no-store" });
     if (!res.ok) throw new Error("HTTP " + res.status);
@@ -189,6 +267,7 @@ async function load() {
       document.getElementById("checked-text").textContent = fmtChecked(data.checked_at);
       checked.style.display = "block";
     }
+    sortbar.style.display = "flex";
     loading.style.display = "none";
   } catch (e) {
     loading.style.display = "none";
