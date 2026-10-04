@@ -84,6 +84,10 @@
     letter-spacing: 1px; color: #0a0a10; background: var(--gold);
     border-radius: 6px; padding: 3px 8px; text-transform: uppercase;
   }
+  .badge.presale {
+    background: transparent; color: var(--gold);
+    border: 1px solid var(--gold); margin-left: 6px;
+  }
   #loading, #error { text-align: center; padding: 60px 20px; color: var(--muted); }
   #error { display: none; }
   #error .panel {
@@ -167,6 +171,12 @@ function fmtAdded(iso) {
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
+function saleBadge(s) {
+  return s.sale_status === "presale"
+    ? ' <span class="badge presale">Not yet on sale</span>'
+    : "";
+}
+
 let cachedData = null;
 let sortMode = "date";
 
@@ -192,7 +202,8 @@ function renderByDate(data) {
           '<div class="poster">' + poster + '</div>' +
           '<div class="info"><div class="title">' + esc(s.movie) + '</div>' +
           '<div class="time">' + esc(s.time) + '</div>' +
-          '<span class="badge">Stadium &middot; Aud ' + esc(s.auditorium) + '</span></div></article>';
+          '<span class="badge">Stadium &middot; Aud ' + esc(s.auditorium) + '</span>' +
+          saleBadge(s) + '</div></article>';
       }).join("") + '</div>';
     board.appendChild(sec);
   }
@@ -232,6 +243,7 @@ function renderNewest(data) {
         '<div class="title">' + esc(s.movie) + '</div>' +
         '<div class="time">' + esc(s.time) + '</div>' +
         '<span class="badge">Stadium &middot; Aud ' + esc(s.auditorium) + '</span>' +
+        saleBadge(s) +
         (s.first_seen ? '<div class="added">Added ' + esc(fmtAdded(s.first_seen)) + '</div>' : "") +
         '</div></article>';
     }).join("") + '</div>';
