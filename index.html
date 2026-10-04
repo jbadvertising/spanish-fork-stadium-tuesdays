@@ -90,6 +90,14 @@
     background: transparent; color: var(--gold);
     border: 1px solid var(--gold); margin-left: 6px;
   }
+  .badge.blackout {
+    background: var(--accent); color: #fff; margin: 0 0 0 8px; vertical-align: 1px;
+  }
+  .blackout-banner {
+    background: rgba(229, 9, 20, 0.12); border: 1px solid var(--accent);
+    color: #ff9a9a; border-radius: 10px; padding: 10px 16px;
+    font-size: 14px; font-weight: 600; margin-bottom: 16px; text-align: center;
+  }
   #loading, #error { text-align: center; padding: 60px 20px; color: var(--muted); }
   #error { display: none; }
   #error .panel {
@@ -150,6 +158,26 @@
 
 <script>
 const DATA_URL = "https://gist.githubusercontent.com/jbadvertising/0c9d5bb8db621759b8ef910b047b6083/raw/showtimes.json";
+
+// One-time Discount Tuesday blackout dates, per Cinemark's Discount Tuesdays
+// page (verified 2026-10-04): "Discount Tuesdays will not be available on
+// 11/24, 12/22, and 12/29."
+// Hardcoded here ON PURPOSE, not in the gist: the watcher script pushes
+// showtime data to the gist on every run, but blackout dates live only in
+// this file, so a data refresh can never add, remove, or override them.
+const BLACKOUT_DATES = {
+  "2026-11-24": true,
+  "2026-12-22": true,
+  "2026-12-29": true,
+};
+
+function blackoutBanner() {
+  return '<div class="blackout-banner">No Discount Tuesday &mdash; regular ticket prices on this date</div>';
+}
+
+function blackoutBadge() {
+  return '<span class="badge blackout">No Discount Tuesday</span>';
+}
 
 function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({
@@ -227,6 +255,7 @@ function renderByDate(data) {
       '<div class="day-head"><h2>' + esc(fmtDate(day.tuesday_date)) + '</h2>' +
       '<span class="count">' + n + (n === 1 ? " showtime" : " showtimes") +
       ' &middot; Stadium Aud 10/11</span></div>' +
+      (BLACKOUT_DATES[day.tuesday_date] ? blackoutBanner() : "") +
       groupByMovie(day.showtimes).map(function (g) {
         return movieRowHtml(g.movie, g.times, "");
       }).join("");
@@ -268,6 +297,7 @@ function renderNewest(data) {
     '<span class="count">' + total + (total === 1 ? " showtime" : " showtimes") + '</span></div>' +
     groups.map(function (g) {
       const meta = '<div class="meta">' + esc(fmtDate(g.date)) +
+        (BLACKOUT_DATES[g.date] ? " " + blackoutBadge() : "") +
         (g.first ? ' &middot; <span class="added-inline">Added ' + esc(fmtAdded(g.first)) + '</span>' : "") +
         '</div>';
       return movieRowHtml(g.movie, g.times, meta);
