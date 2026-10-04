@@ -48,8 +48,6 @@
     cursor: pointer;
   }
   .sortbtn.active { background: var(--gold); color: #0a0a10; border-color: var(--gold); }
-  .date-line { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-  .added { font-size: 12px; color: var(--gold); margin-top: 8px; }
   .day { margin-bottom: 44px; }
   .day-head {
     display: flex; align-items: baseline; gap: 12px;
@@ -60,25 +58,29 @@
   .day-head .count {
     color: var(--muted); font-size: 14px;
   }
-  .grid {
-    display: grid; gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  .movie-row {
+    display: flex; gap: 16px; background: var(--card);
+    border: 1px solid var(--card-border); border-radius: 12px;
+    padding: 14px; margin-bottom: 12px;
   }
-  .card {
-    background: var(--card); border: 1px solid var(--card-border);
-    border-radius: 12px; overflow: hidden;
-    transition: transform .15s ease, border-color .15s ease;
+  .thumb {
+    flex: 0 0 72px; width: 72px; aspect-ratio: 2/3; border-radius: 8px;
+    overflow: hidden; background: #0d0d14; display: flex;
+    align-items: center; justify-content: center; color: var(--muted);
+    font-size: 11px; text-align: center; align-self: flex-start;
   }
-  .card:hover { transform: translateY(-3px); border-color: #3a3a4d; }
-  .poster {
-    aspect-ratio: 2/3; background: #0d0d14;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--muted); font-size: 13px; text-align: center; padding: 12px;
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .mbody { flex: 1; min-width: 0; }
+  .mtitle { font-size: 17px; font-weight: 700; line-height: 1.3; }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 3px; }
+  .added-inline { color: var(--gold); }
+  .times { margin-top: 6px; }
+  .time-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-top: 1px solid var(--card-border);
   }
-  .poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .info { padding: 12px 12px 14px; }
-  .info .title { font-size: 14px; font-weight: 600; line-height: 1.3; min-height: 36px; }
-  .info .time { font-size: 20px; font-weight: 700; margin-top: 8px; color: #fff; }
+  .time-row.first { border-top: 0; padding-top: 4px; }
+  .time-row .t { font-size: 18px; font-weight: 700; }
   .badge {
     display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 700;
     letter-spacing: 1px; color: #0a0a10; background: var(--gold);
@@ -124,8 +126,8 @@
   <div id="checked" style="display:none"><span class="dot"></span><span id="checked-text"></span></div>
 
   <div id="sortbar" style="display:none">
-    <button id="sort-date" class="sortbtn active" onclick="setSort('date')">By date</button>
-    <button id="sort-newest" class="sortbtn" onclick="setSort('newest')">Newest first</button>
+    <button id="sort-date" class="sortbtn" onclick="setSort('date')">By date</button>
+    <button id="sort-newest" class="sortbtn active" onclick="setSort('newest')">Newest first</button>
   </div>
 
   <div id="loading"><div class="spinner"></div>Loading showtimes&hellip;</div>
@@ -173,12 +175,42 @@ function fmtAdded(iso) {
 
 function saleBadge(s) {
   return s.sale_status === "presale"
-    ? ' <span class="badge presale">Not yet on sale</span>'
+    ? '<span class="badge presale">Not yet on sale</span>'
     : "";
 }
 
 let cachedData = null;
-let sortMode = "date";
+let sortMode = "newest";
+
+function thumbHtml(s) {
+  return s.poster
+    ? '<img src="' + esc(s.poster) + '" alt="" loading="lazy">'
+    : '<span>No poster</span>';
+}
+
+function timeRows(times) {
+  return '<div class="times">' + times.map(function (s, i) {
+    return '<div class="time-row' + (i === 0 ? ' first' : '') + '">' +
+      '<span class="t">' + esc(s.time) + '</span>' + saleBadge(s) + '</div>';
+  }).join("") + '</div>';
+}
+
+function movieRowHtml(movie, times, metaHtml) {
+  return '<article class="movie-row">' +
+    '<div class="thumb">' + thumbHtml(times[0]) + '</div>' +
+    '<div class="mbody"><div class="mtitle">' + esc(movie) + '</div>' +
+    (metaHtml || "") + timeRows(times) + '</div></article>';
+}
+
+function groupByMovie(showtimes) {
+  const groups = [];
+  const idx = new Map();
+  for (const s of showtimes) {
+    if (!idx.has(s.movie)) { idx.set(s.movie, groups.length); groups.push({ movie: s.movie, times: [] }); }
+    groups[idx.get(s.movie)].times.push(s);
+  }
+  return groups;
+}
 
 function renderByDate(data) {
   const board = document.getElementById("board");
@@ -193,18 +225,11 @@ function renderByDate(data) {
     const n = day.showtimes.length;
     sec.innerHTML =
       '<div class="day-head"><h2>' + esc(fmtDate(day.tuesday_date)) + '</h2>' +
-      '<span class="count">' + n + (n === 1 ? " showtime" : " showtimes") + '</span></div>' +
-      '<div class="grid">' + day.showtimes.map(s => {
-        const poster = s.poster
-          ? '<img src="' + esc(s.poster) + '" alt="" loading="lazy">'
-          : '<span>No poster</span>';
-        return '<article class="card">' +
-          '<div class="poster">' + poster + '</div>' +
-          '<div class="info"><div class="title">' + esc(s.movie) + '</div>' +
-          '<div class="time">' + esc(s.time) + '</div>' +
-          '<span class="badge">Stadium &middot; Aud ' + esc(s.auditorium) + '</span>' +
-          saleBadge(s) + '</div></article>';
-      }).join("") + '</div>';
+      '<span class="count">' + n + (n === 1 ? " showtime" : " showtimes") +
+      ' &middot; Stadium Aud 10/11</span></div>' +
+      groupByMovie(day.showtimes).map(function (g) {
+        return movieRowHtml(g.movie, g.times, "");
+      }).join("");
     board.appendChild(sec);
   }
 }
@@ -212,41 +237,41 @@ function renderByDate(data) {
 function renderNewest(data) {
   const board = document.getElementById("board");
   board.innerHTML = "";
-  const all = [];
+  const groups = [];
+  const idx = new Map();
   for (const day of data.tuesdays || []) {
-    for (const s of day.showtimes) all.push({ date: day.tuesday_date, s: s });
+    for (const s of day.showtimes) {
+      const key = day.tuesday_date + "\u0000" + s.movie;
+      if (!idx.has(key)) {
+        idx.set(key, groups.length);
+        groups.push({ date: day.tuesday_date, movie: s.movie, times: [], first: null });
+      }
+      const g = groups[idx.get(key)];
+      g.times.push(s);
+      if (!g.first || String(s.first_seen || "") > String(g.first || "")) g.first = s.first_seen;
+    }
   }
-  if (all.length === 0) {
+  if (groups.length === 0) {
     board.innerHTML = '<div class="empty">No stadium-seating Tuesday showtimes posted right now.</div>';
     return;
   }
-  all.sort(function (a, b) {
-    return String(b.s.first_seen || "").localeCompare(String(a.s.first_seen || "")) ||
+  groups.sort(function (a, b) {
+    return String(b.first || "").localeCompare(String(a.first || "")) ||
            a.date.localeCompare(b.date) ||
-           String(a.s.time).localeCompare(String(b.s.time));
+           a.movie.localeCompare(b.movie);
   });
-  const n = all.length;
+  const total = groups.reduce(function (n, g) { return n + g.times.length; }, 0);
   const sec = document.createElement("section");
   sec.className = "day";
   sec.innerHTML =
     '<div class="day-head"><h2>Newest additions</h2>' +
-    '<span class="count">' + n + (n === 1 ? " showtime" : " showtimes") + '</span></div>' +
-    '<div class="grid">' + all.map(function (item) {
-      const date = item.date, s = item.s;
-      const poster = s.poster
-        ? '<img src="' + esc(s.poster) + '" alt="" loading="lazy">'
-        : '<span>No poster</span>';
-      return '<article class="card">' +
-        '<div class="poster">' + poster + '</div>' +
-        '<div class="info">' +
-        '<div class="date-line">' + esc(fmtDate(date)) + '</div>' +
-        '<div class="title">' + esc(s.movie) + '</div>' +
-        '<div class="time">' + esc(s.time) + '</div>' +
-        '<span class="badge">Stadium &middot; Aud ' + esc(s.auditorium) + '</span>' +
-        saleBadge(s) +
-        (s.first_seen ? '<div class="added">Added ' + esc(fmtAdded(s.first_seen)) + '</div>' : "") +
-        '</div></article>';
-    }).join("") + '</div>';
+    '<span class="count">' + total + (total === 1 ? " showtime" : " showtimes") + '</span></div>' +
+    groups.map(function (g) {
+      const meta = '<div class="meta">' + esc(fmtDate(g.date)) +
+        (g.first ? ' &middot; <span class="added-inline">Added ' + esc(fmtAdded(g.first)) + '</span>' : "") +
+        '</div>';
+      return movieRowHtml(g.movie, g.times, meta);
+    }).join("");
   board.appendChild(sec);
 }
 
