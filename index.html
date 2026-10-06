@@ -93,6 +93,7 @@
   .badge.blackout {
     background: var(--accent); color: #fff; margin: 0 0 0 8px; vertical-align: 1px;
   }
+  .time-row .badge { margin-top: 0; margin-left: 6px; }
   .blackout-banner {
     background: rgba(229, 9, 20, 0.12); border: 1px solid var(--accent);
     color: #ff9a9a; border-radius: 10px; padding: 10px 16px;
@@ -201,6 +202,16 @@ function fmtAdded(iso) {
   return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
+// A showtime counts as "new" if it first appeared within the last 48 hours
+// of the data check — i.e. it arrived in the most recent watcher run(s).
+const NEW_WINDOW_MS = 48 * 3600 * 1000;
+
+function isNew(s, checkedMs) {
+  if (!s.first_seen || !checkedMs) return false;
+  const t = Date.parse(s.first_seen);
+  return !isNaN(t) && (checkedMs - t) >= 0 && (checkedMs - t) <= NEW_WINDOW_MS;
+}
+
 function saleBadge(s) {
   return s.sale_status === "presale"
     ? '<span class="badge presale">Not yet on sale</span>'
@@ -216,18 +227,20 @@ function thumbHtml(s) {
     : '<span>No poster</span>';
 }
 
-function timeRows(times) {
+function timeRows(times, isNewFn) {
   return '<div class="times">' + times.map(function (s, i) {
     return '<div class="time-row' + (i === 0 ? ' first' : '') + '">' +
-      '<span class="t">' + esc(s.time) + '</span>' + saleBadge(s) + '</div>';
+      '<span class="t">' + esc(s.time) + '</span>' +
+      (isNewFn && isNewFn(s) ? '<span class="badge">New</span>' : '') +
+      saleBadge(s) + '</div>';
   }).join("") + '</div>';
 }
 
-function movieRowHtml(movie, times, metaHtml) {
+function movieRowHtml(movie, times, metaHtml, isNewFn) {
   return '<article class="movie-row">' +
     '<div class="thumb">' + thumbHtml(times[0]) + '</div>' +
     '<div class="mbody"><div class="mtitle">' + esc(movie) + '</div>' +
-    (metaHtml || "") + timeRows(times) + '</div></article>';
+    (metaHtml || "") + timeRows(times, isNewFn) + '</div></article>';
 }
 
 function groupByMovie(showtimes) {
@@ -247,6 +260,7 @@ function renderByDate(data) {
     board.innerHTML = '<div class="empty">No stadium-seating Tuesday showtimes posted right now.</div>';
     return;
   }
+  const checkedMs = data.checked_at ? Date.parse(data.checked_at) : Date.now();
   for (const day of data.tuesdays) {
     const sec = document.createElement("section");
     sec.className = "day";
@@ -257,7 +271,7 @@ function renderByDate(data) {
       ' &middot; Stadium Aud 10/11</span></div>' +
       (BLACKOUT_DATES[day.tuesday_date] ? blackoutBanner() : "") +
       groupByMovie(day.showtimes).map(function (g) {
-        return movieRowHtml(g.movie, g.times, "");
+        return movieRowHtml(g.movie, g.times, "", function (s) { return isNew(s, checkedMs); });
       }).join("");
     board.appendChild(sec);
   }
@@ -292,15 +306,18 @@ function renderNewest(data) {
   const total = groups.reduce(function (n, g) { return n + g.times.length; }, 0);
   const sec = document.createElement("section");
   sec.className = "day";
+  const checkedMs = data.checked_at ? Date.parse(data.checked_at) : Date.now();
   sec.innerHTML =
     '<div class="day-head"><h2>Newest additions</h2>' +
     '<span class="count">' + total + (total === 1 ? " showtime" : " showtimes") + '</span></div>' +
     groups.map(function (g) {
+      const newCount = g.times.filter(function (s) { return isNew(s, checkedMs); }).length;
       const meta = '<div class="meta">' + esc(fmtDate(g.date)) +
         (BLACKOUT_DATES[g.date] ? " " + blackoutBadge() : "") +
         (g.first ? ' &middot; <span class="added-inline">Added ' + esc(fmtAdded(g.first)) + '</span>' : "") +
+        (newCount > 0 ? ' &middot; <span class="added-inline">' + newCount + ' new</span>' : "") +
         '</div>';
-      return movieRowHtml(g.movie, g.times, meta);
+      return movieRowHtml(g.movie, g.times, meta, function (s) { return isNew(s, checkedMs); });
     }).join("");
   board.appendChild(sec);
 }
