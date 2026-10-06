@@ -94,6 +94,63 @@
     background: var(--accent); color: #fff; margin: 0 0 0 8px; vertical-align: 1px;
   }
   .time-row .badge { margin-top: 0; margin-left: 6px; }
+  #settings-btn {
+    position: fixed; top: 14px; right: 14px; z-index: 40;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--card); border: 1px solid var(--card-border);
+    color: var(--muted); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #settings-btn:hover { color: var(--text); border-color: var(--muted); }
+  #settings-overlay {
+    position: fixed; inset: 0; z-index: 50;
+    background: rgba(4, 4, 8, 0.7);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  #settings-overlay[hidden] { display: none; }
+  #settings-modal {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 22px; width: 100%; max-width: 420px;
+  }
+  .modal-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .modal-head h2 { font-size: 20px; }
+  #settings-close {
+    background: none; border: 0; color: var(--muted);
+    font-size: 26px; line-height: 1; cursor: pointer; padding: 4px 8px;
+  }
+  #settings-close:hover { color: var(--text); }
+  .setting-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; cursor: pointer;
+  }
+  .setting-name { font-size: 15px; font-weight: 600; }
+  .setting-desc { color: var(--muted); font-size: 13px; margin-top: 4px; line-height: 1.5; }
+  .switch { position: relative; flex: 0 0 auto; width: 46px; height: 26px; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider {
+    position: absolute; inset: 0; border-radius: 999px;
+    background: var(--card-border); transition: background 0.2s;
+  }
+  .slider:before {
+    content: ""; position: absolute; width: 20px; height: 20px;
+    left: 3px; top: 3px; border-radius: 50%;
+    background: var(--text); transition: transform 0.2s;
+  }
+  .switch input:checked + .slider { background: var(--gold); }
+  .switch input:checked + .slider:before { transform: translateX(20px); background: #0a0a10; }
+  .hist-divider {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--muted); font-size: 13px; letter-spacing: 2px;
+    text-transform: uppercase; margin: 34px 0 18px;
+  }
+  .hist-divider:before, .hist-divider:after {
+    content: ""; flex: 1; height: 1px; background: var(--card-border);
+  }
+  .day.past { opacity: 0.55; }
   .blackout-banner {
     background: rgba(229, 9, 20, 0.12); border: 1px solid var(--accent);
     color: #ff9a9a; border-radius: 10px; padding: 10px 16px;
@@ -126,6 +183,24 @@
 </style>
 </head>
 <body>
+<button id="settings-btn" aria-label="Settings" title="Settings">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+</button>
+<div id="settings-overlay" hidden>
+  <div id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+    <div class="modal-head">
+      <h2 id="settings-title">Settings</h2>
+      <button id="settings-close" aria-label="Close settings">&times;</button>
+    </div>
+    <label class="setting-row">
+      <div class="setting-text">
+        <div class="setting-name">Show historical showtimes</div>
+        <div class="setting-desc">Past Tuesdays are always saved, just hidden by default. Turn this on to browse the full history.</div>
+      </div>
+      <span class="switch"><input type="checkbox" id="hist-toggle"><span class="slider"></span></span>
+    </label>
+  </div>
+</div>
 <div class="wrap">
   <header>
     <div class="kicker">Cinemark Spanish Fork <span class="xd">&amp; XD</span></div>
@@ -227,6 +302,21 @@ function saleBadge(s) {
 let cachedData = null;
 let sortMode = "newest";
 
+// Settings (persisted in localStorage)
+const HIST_KEY = "sfst-show-historical";
+let showHistorical = false;
+try { showHistorical = localStorage.getItem(HIST_KEY) === "1"; } catch (e) {}
+
+function todayLocal() {
+  const d = new Date();
+  const p = function (n) { return String(n).padStart(2, "0"); };
+  return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+}
+
+function isPastTuesday(tuesdayDate) {
+  return tuesdayDate < todayLocal();
+}
+
 function thumbHtml(s) {
   return s.poster
     ? '<img src="' + esc(s.poster) + '" alt="" loading="lazy">'
@@ -257,26 +347,45 @@ function groupByMovie(showtimes) {
   return groups;
 }
 
+function daySection(day, past) {
+  const sec = document.createElement("section");
+  sec.className = "day" + (past ? " past" : "");
+  const n = day.showtimes.length;
+  sec.innerHTML =
+    '<div class="day-head"><h2>' + esc(fmtDate(day.tuesday_date)) + '</h2>' +
+    '<span class="count">' + n + (n === 1 ? " showtime" : " showtimes") +
+    ' &middot; Stadium Aud 10/11</span></div>' +
+    (BLACKOUT_DATES[day.tuesday_date] ? blackoutBanner() : "") +
+    groupByMovie(day.showtimes).map(function (g) {
+      return movieRowHtml(g.movie, g.times, "");
+    }).join("");
+  return sec;
+}
+
 function renderByDate(data) {
   const board = document.getElementById("board");
   board.innerHTML = "";
-  if (!data.tuesdays || data.tuesdays.length === 0) {
+  const upcoming = [];
+  const past = [];
+  for (const day of data.tuesdays || []) {
+    (isPastTuesday(day.tuesday_date) ? past : upcoming).push(day);
+  }
+  if (upcoming.length === 0 && (!showHistorical || past.length === 0)) {
     board.innerHTML = '<div class="empty">No stadium-seating Tuesday showtimes posted right now.</div>';
     return;
   }
-  for (const day of data.tuesdays) {
-    const sec = document.createElement("section");
-    sec.className = "day";
-    const n = day.showtimes.length;
-    sec.innerHTML =
-      '<div class="day-head"><h2>' + esc(fmtDate(day.tuesday_date)) + '</h2>' +
-      '<span class="count">' + n + (n === 1 ? " showtime" : " showtimes") +
-      ' &middot; Stadium Aud 10/11</span></div>' +
-      (BLACKOUT_DATES[day.tuesday_date] ? blackoutBanner() : "") +
-      groupByMovie(day.showtimes).map(function (g) {
-        return movieRowHtml(g.movie, g.times, "");
-      }).join("");
-    board.appendChild(sec);
+  for (const day of upcoming) {
+    board.appendChild(daySection(day, false));
+  }
+  if (showHistorical && past.length > 0) {
+    past.sort(function (a, b) { return b.tuesday_date.localeCompare(a.tuesday_date); });
+    const div = document.createElement("div");
+    div.className = "hist-divider";
+    div.innerHTML = "<span>Historical showtimes</span>";
+    board.appendChild(div);
+    for (const day of past) {
+      board.appendChild(daySection(day, true));
+    }
   }
 }
 
@@ -290,6 +399,7 @@ function renderNewest(data) {
   const sections = [];
   const sidx = new Map();
   for (const day of data.tuesdays || []) {
+    if (!showHistorical && isPastTuesday(day.tuesday_date)) continue;
     for (const s of day.showtimes) {
       const akey = addedKey(s);
       if (!sidx.has(akey)) {
@@ -347,6 +457,33 @@ function setSort(mode) {
   document.getElementById("sort-newest").classList.toggle("active", mode === "newest");
   if (cachedData) render(cachedData);
 }
+
+function openSettings() {
+  document.getElementById("hist-toggle").checked = showHistorical;
+  document.getElementById("settings-overlay").hidden = false;
+}
+
+function closeSettings() {
+  document.getElementById("settings-overlay").hidden = true;
+}
+
+function wireSettings() {
+  document.getElementById("settings-btn").addEventListener("click", openSettings);
+  document.getElementById("settings-close").addEventListener("click", closeSettings);
+  document.getElementById("settings-overlay").addEventListener("click", function (e) {
+    if (e.target === this) closeSettings();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeSettings();
+  });
+  document.getElementById("hist-toggle").addEventListener("change", function (e) {
+    showHistorical = e.target.checked;
+    try { localStorage.setItem(HIST_KEY, showHistorical ? "1" : "0"); } catch (err) {}
+    if (cachedData) render(cachedData);
+  });
+}
+
+wireSettings();
 
 async function load() {
   const loading = document.getElementById("loading");
