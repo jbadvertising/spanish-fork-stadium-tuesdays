@@ -233,7 +233,10 @@
 </div>
 
 <script>
-const DATA_URL = "https://gist.githubusercontent.com/jbadvertising/0c9d5bb8db621759b8ef910b047b6083/raw/showtimes.json";
+// Board feed lives in this repo (committed by the watcher workflow on every
+// run), so the page reads it same-origin: no gist, no CORS, nothing for the
+// daily script to push anywhere else.
+const DATA_URL = "./showtimes.json";
 
 // One-time Discount Tuesday blackout dates, per Cinemark's Discount Tuesdays
 // page (verified 2026-10-04): "Discount Tuesdays will not be available on
