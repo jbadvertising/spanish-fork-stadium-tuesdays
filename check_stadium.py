@@ -452,17 +452,6 @@ def main():
         # nothing worth a push, but the baseline must still move on
         atomic_write(NOTIFIED_JSON, output)
 
-    # TEMPORARY heartbeat for ntfy delivery testing — REMOVE after the
-    # user confirms the phone alert arrives. Sends a plain "run
-    # completed" ping (no fake showtimes) so delivery can be verified.
-    hb_ok, hb_status = send_ntfy(
-        "Cinemark watcher run completed",
-        f"Daily check finished: {len(tuesdays_out)} Tuesdays, "
-        f"{output['total_showtimes']} showtimes checked. "
-        f"{len(new)} new, {len(now_on_sale)} newly on sale.")
-    log_run(f"ntfy-heartbeat | {hb_status}")
-    print(f"ntfy heartbeat: {hb_status}")
-
     log_run(f"ok | {len(tuesdays_out)} Tuesdays | "
             f"{output['total_showtimes']} showtimes | "
             f"+{len(new)} -{len(removed)} vs notified | errors={len(errors)}")
