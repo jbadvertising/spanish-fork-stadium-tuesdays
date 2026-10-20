@@ -3,7 +3,7 @@
 Cinemark Spanish Fork Tuesday stadium-seating watcher (production).
 
 Theater: Cinemark Spanish Fork and XD (theaterId=1153)
-Target: every Tuesday Cinemark has scheduled, showtimes strictly after 4:00 PM,
+Target: every Tuesday Cinemark has scheduled, showtimes strictly after 3:00 PM,
         in the stadium-seating auditoriums (10/11).
 
 Reliable signal (validated 2026-09-27 against browser-verified ground truth,
@@ -13,7 +13,7 @@ the XD screens. RealD 3D screenings almost always play in the XD auditoriums
 too, but the user hates 3D -> all 3D screenings are excluded regardless.
 
 Rule: include iff "Cinemark XD" in name AND "3D" not in name
-       AND Tuesday AND start time strictly after 16:00.
+       AND Tuesday AND start time strictly after 15:00.
 
 first_seen: each showtime carries the ISO timestamp it was first observed
 (persisted across runs via latest.json), so the board can sort by newest
@@ -136,7 +136,7 @@ def clean_title(name):
     return t
 
 def parse_day(html, date):
-    """Return list of {movie, time, iso, sale_status} for XD non-3D screenings after 4pm."""
+    """Return list of {movie, time, iso, sale_status} for XD non-3D screenings after 3pm."""
     out, seen = [], set()
     for m in NAME_PAT.finditer(html):
         name, availability, start = m.group(1), m.group(2), m.group(3)
@@ -150,8 +150,8 @@ def parse_day(html, date):
             dt = datetime.fromisoformat(start)
         except Exception:
             continue
-        if dt.hour < 16 or (dt.hour == 16 and dt.minute == 0):
-            continue  # strictly after 4:00 PM
+        if dt.hour < 15 or (dt.hour == 15 and dt.minute == 0):
+            continue  # strictly after 3:00 PM
         key = (clean_title(name), dt.strftime("%H:%M"))
         if key in seen:
             continue
@@ -383,7 +383,7 @@ def main():
         "theater": "Cinemark Spanish Fork and XD",
         "theater_id": "1153",
         "checked_at": checked_at,
-        "filter": "Tuesdays, strictly after 4:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
+        "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
         "tuesdays": tuesdays_out,
         "total_tuesdays": len(tuesdays_out),
         "total_showtimes": sum(d["count"] for d in tuesdays_out),
