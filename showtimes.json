@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-10-20T10:57:59.258205-06:00",
+  "checked_at": "2026-10-20T11:02:39.729781-06:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -269,7 +269,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:27:23.274547-06:00",
-          "poster": null
+          "poster": "https://image.tmdb.org/t/p/w500/dZVHrtaZa5MsuPc4gW72e3S9bii.jpg"
         },
         {
           "movie": "Disney's Hexed",
@@ -278,7 +278,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:20:51.909668-06:00",
-          "poster": null
+          "poster": "https://image.tmdb.org/t/p/w500/dZVHrtaZa5MsuPc4gW72e3S9bii.jpg"
         },
         {
           "movie": "Disney's Hexed",
@@ -287,7 +287,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:20:51.909668-06:00",
-          "poster": null
+          "poster": "https://image.tmdb.org/t/p/w500/dZVHrtaZa5MsuPc4gW72e3S9bii.jpg"
         }
       ],
       "count": 3

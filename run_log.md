@@ -84,3 +84,6 @@
 2026-10-20T11:01:02.336872-06:00 | posters | backfilled Wildwood
 2026-10-20T11:01:02.339287-06:00 | ok | 9 Tuesdays | 37 showtimes | +0 -0 vs notified | errors=0
 2026-10-20T11:01:02.339323-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-20T11:05:43.912377-06:00 | posters | backfilled Disney's Hexed
+2026-10-20T11:05:43.915646-06:00 | ok | 9 Tuesdays | 37 showtimes | +0 -0 vs notified | errors=0
+2026-10-20T11:05:43.915710-06:00 | gist | skipped on GitHub Actions (board reads repo file)
