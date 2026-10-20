@@ -87,3 +87,7 @@
 2026-10-20T11:05:43.912377-06:00 | posters | backfilled Disney's Hexed
 2026-10-20T11:05:43.915646-06:00 | ok | 9 Tuesdays | 37 showtimes | +0 -0 vs notified | errors=0
 2026-10-20T11:05:43.915710-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-20T11:14:49.827937-06:00 | posters | corrected Street Fighter
+2026-10-20T11:14:50.054654-06:00 | posters | corrected Verity
+2026-10-20T11:14:50.193375-06:00 | ok | 9 Tuesdays | 37 showtimes | +0 -0 vs notified | errors=0
+2026-10-20T11:14:50.193418-06:00 | gist | skipped on GitHub Actions (board reads repo file)
