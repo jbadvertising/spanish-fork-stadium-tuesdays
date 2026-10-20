@@ -1,8 +1,8 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-10-20T10:20:51.909668-06:00",
-  "filter": "Tuesdays, strictly after 4:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
+  "checked_at": "2026-10-20T10:27:23.274547-06:00",
+  "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
       "tuesday_date": "2026-10-06",
@@ -188,6 +188,15 @@
       "tuesday_date": "2026-10-27",
       "showtimes": [
         {
+          "movie": "Wildwood",
+          "time": "3:50 PM",
+          "iso": "2026-10-27T15:50:00-06:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-20T10:27:23.274547-06:00",
+          "poster": null
+        },
+        {
           "movie": "Clayface",
           "time": "4:45 PM",
           "iso": "2026-10-27T16:45:00-06:00",
@@ -215,11 +224,20 @@
           "poster": "https://image.tmdb.org/t/p/w500/5jCpQnWPikggmQZoDp1eAi6BI6w.jpg"
         }
       ],
-      "count": 3
+      "count": 4
     },
     {
       "tuesday_date": "2026-11-10",
       "showtimes": [
+        {
+          "movie": "The Cat in the Hat",
+          "time": "3:40 PM",
+          "iso": "2026-11-10T15:40:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-20T10:27:23.274547-06:00",
+          "poster": null
+        },
         {
           "movie": "Godzilla Minus Zero",
           "time": "6:30 PM",
@@ -239,11 +257,20 @@
           "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
         }
       ],
-      "count": 2
+      "count": 3
     },
     {
       "tuesday_date": "2026-12-01",
       "showtimes": [
+        {
+          "movie": "Disney's Hexed",
+          "time": "4:00 PM",
+          "iso": "2026-12-01T16:00:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-20T10:27:23.274547-06:00",
+          "poster": null
+        },
         {
           "movie": "Disney's Hexed",
           "time": "6:45 PM",
@@ -263,7 +290,7 @@
           "poster": null
         }
       ],
-      "count": 2
+      "count": 3
     },
     {
       "tuesday_date": "2026-12-15",
@@ -283,6 +310,15 @@
     {
       "tuesday_date": "2026-12-22",
       "showtimes": [
+        {
+          "movie": "Dune: Part Three",
+          "time": "3:15 PM",
+          "iso": "2026-12-22T15:15:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-20T10:27:23.274547-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+        },
         {
           "movie": "Avengers: Doomsday",
           "time": "6:30 PM",
@@ -311,11 +347,20 @@
           "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         }
       ],
-      "count": 3
+      "count": 4
     },
     {
       "tuesday_date": "2026-12-29",
       "showtimes": [
+        {
+          "movie": "Dune: Part Three",
+          "time": "3:15 PM",
+          "iso": "2026-12-29T15:15:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-20T10:27:23.274547-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+        },
         {
           "movie": "Avengers: Doomsday",
           "time": "6:30 PM",
@@ -344,10 +389,10 @@
           "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         }
       ],
-      "count": 3
+      "count": 4
     }
   ],
   "total_tuesdays": 9,
-  "total_showtimes": 32,
+  "total_showtimes": 37,
   "errors": []
 }

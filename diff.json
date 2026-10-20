@@ -1,15 +1,30 @@
 {
-  "checked_at": "2026-10-20T10:20:51.909668-06:00",
+  "checked_at": "2026-10-20T10:27:23.274547-06:00",
   "new_or_changed": [
     {
-      "tuesday_date": "2026-12-01",
-      "movie": "Disney's Hexed",
-      "time": "6:45 PM"
+      "tuesday_date": "2026-10-27",
+      "movie": "Wildwood",
+      "time": "3:50 PM"
+    },
+    {
+      "tuesday_date": "2026-11-10",
+      "movie": "The Cat in the Hat",
+      "time": "3:40 PM"
     },
     {
       "tuesday_date": "2026-12-01",
       "movie": "Disney's Hexed",
-      "time": "9:30 PM"
+      "time": "4:00 PM"
+    },
+    {
+      "tuesday_date": "2026-12-22",
+      "movie": "Dune: Part Three",
+      "time": "3:15 PM"
+    },
+    {
+      "tuesday_date": "2026-12-29",
+      "movie": "Dune: Part Three",
+      "time": "3:15 PM"
     }
   ],
   "removed": [],

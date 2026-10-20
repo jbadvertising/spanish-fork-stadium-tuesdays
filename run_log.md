@@ -73,3 +73,9 @@
 2026-10-20T10:23:43.008835-06:00 | ntfy | sent (HTTP 200)
 2026-10-20T10:23:43.009711-06:00 | ok | 9 Tuesdays | 32 showtimes | +2 -0 vs notified | errors=0
 2026-10-20T10:23:43.009772-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-20T10:30:21.234040-06:00 | posters | Disney's Hexed: lookup failed (ModuleNotFoundError)
+2026-10-20T10:30:21.234140-06:00 | posters | The Cat in the Hat: lookup failed (ModuleNotFoundError)
+2026-10-20T10:30:21.234206-06:00 | posters | Wildwood: lookup failed (ModuleNotFoundError)
+2026-10-20T10:30:21.451005-06:00 | ntfy | sent (HTTP 200)
+2026-10-20T10:30:21.451726-06:00 | ok | 9 Tuesdays | 37 showtimes | +5 -0 vs notified | errors=0
+2026-10-20T10:30:21.451769-06:00 | gist | skipped on GitHub Actions (board reads repo file)
