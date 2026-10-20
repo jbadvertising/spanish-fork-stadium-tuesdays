@@ -19,9 +19,15 @@ first_seen: each showtime carries the ISO timestamp it was first observed
 (persisted across runs via latest.json), so the board can sort by newest
 additions. Re-added entries after a gap get a fresh first_seen.
 
-posters: tmdb_posters.json maps board titles to TMDB poster URLs. Any
-title missing from it is looked up on TMDB automatically each run and
-persisted, so new movies get their posters without manual work.
+posters: tmdb_posters.json maps board titles to TMDB poster URLs.
+Every title is re-resolved on TMDB automatically each run and the
+mapping persisted, so new movies get posters with no manual work and
+a wrong or stale pick corrects itself. The lookup is deliberately
+robust: it tries progressively simplified title variants
+(affix-stripped) and scores candidates by title similarity — exact
+match wins, fuzzy matches need >= 0.8 similarity, and anything
+weaker is left poster-less rather than risk a wrong poster (it is
+retried next run).
 
 sale_status: each showtime carries on_sale / presale / unknown from the
 page's offer availability (PreOrder = tickets not yet on sale). Flips
@@ -45,7 +51,7 @@ State files:
 Fail-closed: a failed date keeps its previous entry (marked stale); a fully
 failed run never overwrites latest.json.
 """
-import json, os, re, sys, time, random
+import json, os, re, sys, time, random, difflib
 import urllib.request, urllib.error, urllib.parse, gzip
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -65,6 +71,10 @@ LOG_MD = os.path.join(WORKSPACE, "run_log.md")
 GIST_ID_FILE = os.path.join(WORKSPACE, "gist_id.txt")
 NTFY_TOPIC_FILE = os.path.join(WORKSPACE, "ntfy_topic.txt")
 TMDB_IMG_BASE = "https://image.tmdb.org/t/p/w500"
+# Minimum title similarity for a fuzzy poster match. Below this we
+# would rather show no poster than risk a wrong one; the title is
+# retried on the next run (and TMDB may have a better entry by then).
+FUZZY_MIN_SIMILARITY = 0.8
 
 THEATER_URL = "https://www.cinemark.com/theatres/ut-spanish-fork/cinemark-spanish-fork-and-xd"
 DENVER = ZoneInfo("America/Denver")
@@ -184,27 +194,63 @@ def clean_search_title(movie):
 def norm_title(t):
     return re.sub(r'[^a-z0-9]', '', (t or '').lower())
 
-def pick_poster(movie, candidates):
-    """Best poster URL for a board title from TMDB candidates.
+def title_variants(movie):
+    """Search-query variants for a board title, most specific first.
 
-    Prefers an exact title match (most recently released wins, so new
-    movies beat older same-name titles); falls back to TMDB's top
-    relevance result. Returns None when nothing has a poster.
+    Cinemark's billing sometimes differs from TMDB's title (studio
+    possessives like "Disney's Hexed", leading articles, screening
+    suffixes). Trying progressively simplified variants makes the
+    lookup robust with no manual title editing anywhere.
     """
-    if isinstance(candidates, dict):  # error dict from the search helper
+    variants = []
+
+    def add(t):
+        t = (t or "").strip()
+        if t and t not in variants:
+            variants.append(t)
+
+    base = clean_search_title(movie)
+    add(base)
+    add(re.sub(r"^[\w'’]+'s\s+", "", base))                     # possessive prefix
+    add(re.sub(r"^(the|a|an)\s+", "", base, flags=re.I))        # leading article
+    add(re.sub(r"^[\w'’]+'s\s+", "",
+               re.sub(r"^(the|a|an)\s+", "", base, flags=re.I)))  # both
+    add(movie)  # raw board title as a last resort
+    return variants
+
+def title_similarity(a, b):
+    """0..1 similarity of two titles, punctuation/case-insensitive."""
+    if not a or not b:
+        return 0.0
+    return difflib.SequenceMatcher(None, norm_title(a), norm_title(b)).ratio()
+
+def pick_poster(movie, candidates):
+    """Best poster URL for a title from TMDB candidates, or None.
+
+    Scoring: an exact normalized-title match wins outright (newest
+    release first, so remakes resolve to the current film). Otherwise
+    the best fuzzy match at or above FUZZY_MIN_SIMILARITY wins, again
+    newest first. Below the threshold we return None rather than risk
+    a wrong poster — the title is retried on the next run.
+    """
+    if isinstance(candidates, dict) or not candidates:  # error dict / empty
         return None
-    want = norm_title(movie)
-    exact = [c for c in candidates
-             if c.get("poster_path")
-             and want in (norm_title(c.get("title")),
-                          norm_title(c.get("original_title")))]
-    if exact:
-        exact.sort(key=lambda c: c.get("release_date") or "", reverse=True)
-        return TMDB_IMG_BASE + exact[0]["poster_path"]
+    scored = []
     for c in candidates:
-        if c.get("poster_path"):
-            return TMDB_IMG_BASE + c["poster_path"]
-    return None
+        if not c.get("poster_path"):
+            continue
+        sim = max(title_similarity(movie, c.get("title")),
+                  title_similarity(movie, c.get("original_title")))
+        scored.append((sim, c.get("release_date") or "",
+                       c.get("popularity") or 0, c["poster_path"]))
+    if not scored:
+        return None
+    exact = [s for s in scored if s[0] >= 0.999]
+    pool = exact or [s for s in scored if s[0] >= FUZZY_MIN_SIMILARITY]
+    if not pool:
+        return None
+    pool.sort(key=lambda s: (s[1], s[2]), reverse=True)  # newest, then popular
+    return TMDB_IMG_BASE + pool[0][3]
 
 def tmdb_search_candidates(query):
     """TMDB candidates for a title, from either credential route.
@@ -233,29 +279,33 @@ def tmdb_search_candidates(query):
     from tmdb_search import search_candidates
     return search_candidates(query)
 
-def refresh_missing_posters(movies):
-    """Fill tmdb_posters.json for board titles that lack a poster.
+def refresh_posters(movies):
+    """Resolve every board title to its best TMDB poster, every run.
 
-    Self-learning: new hits are persisted, so each title is looked up
-    once. Best-effort: a lookup failure just leaves that movie
-    poster-less for this run; it never breaks the watcher.
-    Returns the full title -> poster-URL mapping.
+    Re-running the variant+fuzzy lookup for all titles (not just new
+    ones) makes the mapping self-correcting: a poster that was picked
+    wrong, or went stale as TMDB's data changed, is replaced by the
+    current best match with no manual edits anywhere. A title whose
+    lookup finds nothing keeps its previous mapping if it has one;
+    otherwise it stays poster-less for this run. Best-effort: lookup
+    failures never break the watcher. Persists and returns the full
+    title -> poster-URL mapping.
     """
     mapping = load_json(POSTERS_JSON) or {}
-    missing = sorted(m for m in movies if m not in mapping)
-    if not missing:
-        return mapping
-    for m in missing:
+    for m in sorted(movies):
         try:
-            q = clean_search_title(m)
-            poster = pick_poster(q, tmdb_search_candidates(q))
+            poster = None
+            for q in title_variants(m):
+                poster = pick_poster(q, tmdb_search_candidates(q))
+                if poster:
+                    break
         except Exception as e:
             log_run(f"posters | {m}: lookup failed ({type(e).__name__})")
             continue
-        if poster:
+        if poster and mapping.get(m) != poster:
+            log_run(f"posters | {'corrected' if m in mapping else 'backfilled'} {m}")
             mapping[m] = poster
-            log_run(f"posters | backfilled {m}")
-        else:
+        elif not poster and m not in mapping:
             log_run(f"posters | {m}: no confident TMDB match")
     atomic_write(POSTERS_JSON, mapping)
     return mapping
@@ -381,8 +431,9 @@ def main():
             seen_dates.add(td)
     tuesdays_out.sort(key=lambda d: d["tuesday_date"])
 
-    # posters: backfill any new titles from TMDB, then attach to all entries
-    posters = refresh_missing_posters(
+    # posters: re-resolve every title from TMDB each run (self-correcting),
+    # then attach to all entries
+    posters = refresh_posters(
         {s["movie"] for d in tuesdays_out for s in d["showtimes"]})
     for d in tuesdays_out:
         for s in d["showtimes"]:
