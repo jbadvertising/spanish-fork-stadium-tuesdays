@@ -170,8 +170,16 @@ def load_json(path):
         return None
 
 def clean_search_title(movie):
-    """Board titles sometimes carry screening suffixes TMDB won't match."""
-    return re.sub(r'\s+Insider Screenings\s*$', '', movie, flags=re.I).strip()
+    """Board titles sometimes carry affixes TMDB won't match.
+
+    Cinemark bills some films with a possessive studio prefix
+    ("Disney's Hexed") that returns zero TMDB results; strip it (and
+    the known "Insider Screenings" suffix) for the search query only.
+    The board's display title is never changed.
+    """
+    t = re.sub(r'\s+Insider Screenings\s*$', '', movie, flags=re.I).strip()
+    t = re.sub(r"^Disney'?s\s+", '', t, flags=re.I).strip()
+    return t
 
 def norm_title(t):
     return re.sub(r'[^a-z0-9]', '', (t or '').lower())
@@ -239,7 +247,8 @@ def refresh_missing_posters(movies):
         return mapping
     for m in missing:
         try:
-            poster = pick_poster(m, tmdb_search_candidates(clean_search_title(m)))
+            q = clean_search_title(m)
+            poster = pick_poster(q, tmdb_search_candidates(q))
         except Exception as e:
             log_run(f"posters | {m}: lookup failed ({type(e).__name__})")
             continue
