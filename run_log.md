@@ -69,3 +69,7 @@
 2026-10-18T19:56:53.952850-06:00 | gist | skipped on GitHub Actions (board reads repo file)
 2026-10-19T13:48:59.393577-06:00 | ok | 8 Tuesdays | 30 showtimes | +0 -0 vs notified | errors=0
 2026-10-19T13:48:59.393644-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-20T10:23:42.796802-06:00 | posters | Disney's Hexed: lookup failed (ModuleNotFoundError)
+2026-10-20T10:23:43.008835-06:00 | ntfy | sent (HTTP 200)
+2026-10-20T10:23:43.009711-06:00 | ok | 9 Tuesdays | 32 showtimes | +2 -0 vs notified | errors=0
+2026-10-20T10:23:43.009772-06:00 | gist | skipped on GitHub Actions (board reads repo file)

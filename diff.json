@@ -1,6 +1,17 @@
 {
-  "checked_at": "2026-10-19T13:45:45.180119-06:00",
-  "new_or_changed": [],
+  "checked_at": "2026-10-20T10:20:51.909668-06:00",
+  "new_or_changed": [
+    {
+      "tuesday_date": "2026-12-01",
+      "movie": "Disney's Hexed",
+      "time": "6:45 PM"
+    },
+    {
+      "tuesday_date": "2026-12-01",
+      "movie": "Disney's Hexed",
+      "time": "9:30 PM"
+    }
+  ],
   "removed": [],
   "now_on_sale": [],
   "no_longer_on_sale": []
