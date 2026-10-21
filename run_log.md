@@ -93,3 +93,10 @@
 2026-10-20T11:14:50.193418-06:00 | gist | skipped on GitHub Actions (board reads repo file)
 2026-10-20T12:28:33.590534-06:00 | ok | 9 Tuesdays | 37 showtimes | +0 -0 vs notified | errors=0
 2026-10-20T12:28:33.590599-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-21T12:34:35.129183-06:00 | posters | corrected Dune: Part Three
+2026-10-21T12:34:35.161686-06:00 | posters | corrected Dune: Part Three Insider Screenings
+2026-10-21T12:34:35.452230-06:00 | posters | corrected Street Fighter
+2026-10-21T12:34:35.971853-06:00 | posters | backfilled You Can See Everything
+2026-10-21T12:34:36.148533-06:00 | ntfy | sent (HTTP 200)
+2026-10-21T12:34:36.149300-06:00 | ok | 8 Tuesdays | 35 showtimes | +1 -3 vs notified | errors=0
+2026-10-21T12:34:36.149347-06:00 | gist | skipped on GitHub Actions (board reads repo file)
