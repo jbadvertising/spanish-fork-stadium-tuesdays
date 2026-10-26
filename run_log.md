@@ -113,3 +113,6 @@
 2026-10-24T11:21:56.298195-06:00 | gist | skipped on GitHub Actions (board reads repo file)
 2026-10-25T11:36:40.259639-06:00 | ok | 8 Tuesdays | 35 showtimes | +0 -0 vs notified | errors=0
 2026-10-25T11:36:40.259713-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-26T13:52:34.705743-06:00 | posters | corrected Avengers: Doomsday
+2026-10-26T13:52:35.101343-06:00 | ok | 8 Tuesdays | 35 showtimes | +0 -0 vs notified | errors=0
+2026-10-26T13:52:35.101397-06:00 | gist | skipped on GitHub Actions (board reads repo file)

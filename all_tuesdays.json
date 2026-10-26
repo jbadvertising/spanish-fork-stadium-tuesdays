@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-10-25T11:32:38.013669-06:00",
+  "checked_at": "2026-10-26T13:49:41.918442-06:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -302,7 +302,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/sLYCyO58UvBuBtbHTQjPCCgJ4dG.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -344,7 +344,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/sLYCyO58UvBuBtbHTQjPCCgJ4dG.jpg"
         },
         {
           "movie": "Dune: Part Three",
