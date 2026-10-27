@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-10-21T12:31:37.140189-06:00",
+  "checked_at": "2026-10-26T19:12:24.073185-06:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -203,7 +203,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-06T07:50:05.137567-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/5jCpQnWPikggmQZoDp1eAi6BI6w.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg"
         },
         {
           "movie": "You Can See Everything",
@@ -221,7 +221,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-06T07:50:05.137567-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/5jCpQnWPikggmQZoDp1eAi6BI6w.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg"
         },
         {
           "movie": "Clayface",
@@ -230,7 +230,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-06T07:50:05.137567-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/5jCpQnWPikggmQZoDp1eAi6BI6w.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg"
         }
       ],
       "count": 5
@@ -269,6 +269,54 @@
       "count": 3
     },
     {
+      "tuesday_date": "2026-11-24",
+      "showtimes": [
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "6:30 PM",
+          "iso": "2026-11-24T18:30:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-26T19:12:24.073185-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        },
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "10:10 PM",
+          "iso": "2026-11-24T22:10:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-26T19:12:24.073185-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        }
+      ],
+      "count": 2
+    },
+    {
+      "tuesday_date": "2026-12-01",
+      "showtimes": [
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "6:30 PM",
+          "iso": "2026-12-01T18:30:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-26T19:12:24.073185-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        },
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "10:10 PM",
+          "iso": "2026-12-01T22:10:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-26T19:12:24.073185-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        }
+      ],
+      "count": 2
+    },
+    {
       "tuesday_date": "2026-12-15",
       "showtimes": [
         {
@@ -278,7 +326,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/xKCdkfKmEqS0mKpWgHTeWuISHS3.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         }
       ],
       "count": 1
@@ -293,7 +341,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:27:23.274547-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/xKCdkfKmEqS0mKpWgHTeWuISHS3.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         },
         {
           "movie": "Avengers: Doomsday",
@@ -302,7 +350,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/sLYCyO58UvBuBtbHTQjPCCgJ4dG.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -311,7 +359,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/xKCdkfKmEqS0mKpWgHTeWuISHS3.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -320,7 +368,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/xKCdkfKmEqS0mKpWgHTeWuISHS3.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         }
       ],
       "count": 4
@@ -335,7 +383,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:27:23.274547-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/xKCdkfKmEqS0mKpWgHTeWuISHS3.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         },
         {
           "movie": "Avengers: Doomsday",
@@ -344,7 +392,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/sLYCyO58UvBuBtbHTQjPCCgJ4dG.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -353,7 +401,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/xKCdkfKmEqS0mKpWgHTeWuISHS3.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -362,13 +410,13 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/xKCdkfKmEqS0mKpWgHTeWuISHS3.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
         }
       ],
       "count": 4
     }
   ],
-  "total_tuesdays": 8,
-  "total_showtimes": 35,
+  "total_tuesdays": 10,
+  "total_showtimes": 39,
   "errors": []
 }

@@ -1,6 +1,27 @@
 {
-  "checked_at": "2026-10-26T13:49:41.918442-06:00",
-  "new_or_changed": [],
+  "checked_at": "2026-10-26T19:12:24.073185-06:00",
+  "new_or_changed": [
+    {
+      "tuesday_date": "2026-11-24",
+      "movie": "The Hunger Games: Sunrise on the Reaping",
+      "time": "10:10 PM"
+    },
+    {
+      "tuesday_date": "2026-11-24",
+      "movie": "The Hunger Games: Sunrise on the Reaping",
+      "time": "6:30 PM"
+    },
+    {
+      "tuesday_date": "2026-12-01",
+      "movie": "The Hunger Games: Sunrise on the Reaping",
+      "time": "10:10 PM"
+    },
+    {
+      "tuesday_date": "2026-12-01",
+      "movie": "The Hunger Games: Sunrise on the Reaping",
+      "time": "6:30 PM"
+    }
+  ],
   "removed": [],
   "now_on_sale": [],
   "no_longer_on_sale": []

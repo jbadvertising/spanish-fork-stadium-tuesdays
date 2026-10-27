@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-10-26T13:49:41.918442-06:00",
+  "checked_at": "2026-10-26T19:12:24.073185-06:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -269,6 +269,54 @@
       "count": 3
     },
     {
+      "tuesday_date": "2026-11-24",
+      "showtimes": [
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "6:30 PM",
+          "iso": "2026-11-24T18:30:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-26T19:12:24.073185-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        },
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "10:10 PM",
+          "iso": "2026-11-24T22:10:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-26T19:12:24.073185-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        }
+      ],
+      "count": 2
+    },
+    {
+      "tuesday_date": "2026-12-01",
+      "showtimes": [
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "6:30 PM",
+          "iso": "2026-12-01T18:30:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-26T19:12:24.073185-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        },
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "10:10 PM",
+          "iso": "2026-12-01T22:10:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-26T19:12:24.073185-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        }
+      ],
+      "count": 2
+    },
+    {
       "tuesday_date": "2026-12-15",
       "showtimes": [
         {
@@ -368,7 +416,7 @@
       "count": 4
     }
   ],
-  "total_tuesdays": 8,
-  "total_showtimes": 35,
+  "total_tuesdays": 10,
+  "total_showtimes": 39,
   "errors": []
 }

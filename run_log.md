@@ -116,3 +116,7 @@
 2026-10-26T13:52:34.705743-06:00 | posters | corrected Avengers: Doomsday
 2026-10-26T13:52:35.101343-06:00 | ok | 8 Tuesdays | 35 showtimes | +0 -0 vs notified | errors=0
 2026-10-26T13:52:35.101397-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-26T19:15:19.582848-06:00 | posters | backfilled The Hunger Games: Sunrise on the Reaping
+2026-10-26T19:15:19.697125-06:00 | ntfy | sent (HTTP 200)
+2026-10-26T19:15:19.697860-06:00 | ok | 10 Tuesdays | 39 showtimes | +4 -0 vs notified | errors=0
+2026-10-26T19:15:19.697905-06:00 | gist | skipped on GitHub Actions (board reads repo file)
