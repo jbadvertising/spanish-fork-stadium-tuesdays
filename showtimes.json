@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-10-27T13:19:19.549014-06:00",
+  "checked_at": "2026-10-28T13:25:42.317523-06:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -23,7 +23,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/rmaNMA1seHqpjtnYKzyynFAr1g8.jpg"
         },
         {
           "movie": "Verity",
@@ -32,7 +32,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/rmaNMA1seHqpjtnYKzyynFAr1g8.jpg"
         },
         {
           "movie": "Digger",
@@ -50,7 +50,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/rmaNMA1seHqpjtnYKzyynFAr1g8.jpg"
         },
         {
           "movie": "Digger",
@@ -74,7 +74,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-06T07:50:05.137567-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/rmaNMA1seHqpjtnYKzyynFAr1g8.jpg"
         },
         {
           "movie": "Other Mommy",
@@ -92,7 +92,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-06T07:50:05.137567-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/rmaNMA1seHqpjtnYKzyynFAr1g8.jpg"
         },
         {
           "movie": "Other Mommy",
@@ -236,6 +236,66 @@
       "count": 5
     },
     {
+      "tuesday_date": "2026-11-03",
+      "showtimes": [
+        {
+          "movie": "Wildwood",
+          "time": "3:55 PM",
+          "iso": "2026-11-03T15:55:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-28T13:25:42.317523-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg"
+        },
+        {
+          "movie": "Clayface",
+          "time": "4:40 PM",
+          "iso": "2026-11-03T16:40:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-28T13:25:42.317523-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg"
+        },
+        {
+          "movie": "Wildwood",
+          "time": "7:10 PM",
+          "iso": "2026-11-03T19:10:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-28T13:25:42.317523-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg"
+        },
+        {
+          "movie": "Clayface",
+          "time": "7:25 PM",
+          "iso": "2026-11-03T19:25:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-28T13:25:42.317523-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg"
+        },
+        {
+          "movie": "Clayface",
+          "time": "10:15 PM",
+          "iso": "2026-11-03T22:15:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-28T13:25:42.317523-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/9l1NuFjel2j89hiuiJbsxfblqjy.jpg"
+        },
+        {
+          "movie": "Resident Evil",
+          "time": "10:25 PM",
+          "iso": "2026-11-03T22:25:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-10-28T13:25:42.317523-06:00",
+          "poster": "https://image.tmdb.org/t/p/w500/i7UyjfPio0VFHB9rBUZSFyhOoM8.jpg"
+        }
+      ],
+      "count": 6
+    },
+    {
       "tuesday_date": "2026-11-10",
       "showtimes": [
         {
@@ -275,7 +335,7 @@
           "movie": "The Hunger Games: Sunrise on the Reaping",
           "time": "6:30 PM",
           "iso": "2026-11-24T18:30:00-07:00",
-          "sale_status": "presale",
+          "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
           "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
@@ -284,7 +344,7 @@
           "movie": "The Hunger Games: Sunrise on the Reaping",
           "time": "10:10 PM",
           "iso": "2026-11-24T22:10:00-07:00",
-          "sale_status": "presale",
+          "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
           "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
@@ -299,7 +359,7 @@
           "movie": "The Hunger Games: Sunrise on the Reaping",
           "time": "6:30 PM",
           "iso": "2026-12-01T18:30:00-07:00",
-          "sale_status": "presale",
+          "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
           "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
@@ -308,7 +368,7 @@
           "movie": "The Hunger Games: Sunrise on the Reaping",
           "time": "10:10 PM",
           "iso": "2026-12-01T22:10:00-07:00",
-          "sale_status": "presale",
+          "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
           "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
@@ -326,7 +386,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/wuUe5BjmS0nJnw1n6pBbTtYFXCZ.jpg"
         }
       ],
       "count": 1
@@ -341,7 +401,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:27:23.274547-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/wuUe5BjmS0nJnw1n6pBbTtYFXCZ.jpg"
         },
         {
           "movie": "Avengers: Doomsday",
@@ -359,7 +419,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/wuUe5BjmS0nJnw1n6pBbTtYFXCZ.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -368,7 +428,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/wuUe5BjmS0nJnw1n6pBbTtYFXCZ.jpg"
         }
       ],
       "count": 4
@@ -383,7 +443,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:27:23.274547-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/wuUe5BjmS0nJnw1n6pBbTtYFXCZ.jpg"
         },
         {
           "movie": "Avengers: Doomsday",
@@ -401,7 +461,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/wuUe5BjmS0nJnw1n6pBbTtYFXCZ.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -410,13 +470,13 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/d43fvHQsIMa4kpyhKXw0haEJIvI.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/wuUe5BjmS0nJnw1n6pBbTtYFXCZ.jpg"
         }
       ],
       "count": 4
     }
   ],
-  "total_tuesdays": 10,
-  "total_showtimes": 39,
+  "total_tuesdays": 11,
+  "total_showtimes": 45,
   "errors": []
 }

@@ -122,3 +122,9 @@
 2026-10-26T19:15:19.697905-06:00 | gist | skipped on GitHub Actions (board reads repo file)
 2026-10-27T13:22:28.950220-06:00 | ok | 10 Tuesdays | 39 showtimes | +0 -0 vs notified | errors=0
 2026-10-27T13:22:28.950294-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-28T13:28:28.564801-06:00 | posters | corrected Dune: Part Three
+2026-10-28T13:28:28.604363-06:00 | posters | corrected Dune: Part Three Insider Screenings
+2026-10-28T13:28:29.096096-06:00 | posters | corrected Verity
+2026-10-28T13:28:29.397583-06:00 | ntfy | sent (HTTP 200)
+2026-10-28T13:28:29.398366-06:00 | ok | 11 Tuesdays | 45 showtimes | +6 -0 vs notified | errors=0
+2026-10-28T13:28:29.398406-06:00 | gist | skipped on GitHub Actions (board reads repo file)
