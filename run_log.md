@@ -128,3 +128,8 @@
 2026-10-28T13:28:29.397583-06:00 | ntfy | sent (HTTP 200)
 2026-10-28T13:28:29.398366-06:00 | ok | 11 Tuesdays | 45 showtimes | +6 -0 vs notified | errors=0
 2026-10-28T13:28:29.398406-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-29T13:32:27.312705-06:00 | posters | corrected Dune: Part Three
+2026-10-29T13:32:27.324587-06:00 | posters | corrected Dune: Part Three Insider Screenings
+2026-10-29T13:32:27.449991-06:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
+2026-10-29T13:32:27.535268-06:00 | ok | 11 Tuesdays | 45 showtimes | +0 -0 vs notified | errors=0
+2026-10-29T13:32:27.535328-06:00 | gist | skipped on GitHub Actions (board reads repo file)
