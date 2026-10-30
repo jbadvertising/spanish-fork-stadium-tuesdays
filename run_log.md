@@ -133,3 +133,7 @@
 2026-10-29T13:32:27.449991-06:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
 2026-10-29T13:32:27.535268-06:00 | ok | 11 Tuesdays | 45 showtimes | +0 -0 vs notified | errors=0
 2026-10-29T13:32:27.535328-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-10-30T13:09:45.727019-06:00 | posters | corrected Avengers: Doomsday
+2026-10-30T13:09:45.981314-06:00 | posters | corrected Wildwood
+2026-10-30T13:09:46.005550-06:00 | ok | 11 Tuesdays | 45 showtimes | +0 -0 vs notified | errors=0
+2026-10-30T13:09:46.005609-06:00 | gist | skipped on GitHub Actions (board reads repo file)
