@@ -142,3 +142,9 @@
 2026-10-31T12:27:45.779113-06:00 | posters | corrected Wildwood
 2026-10-31T12:27:45.860837-06:00 | ok | 11 Tuesdays | 45 showtimes | +0 -0 vs notified | errors=0
 2026-10-31T12:27:45.860892-06:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-01T11:52:48.116956-07:00 | posters | corrected Avengers: Doomsday
+2026-11-01T11:52:48.925941-07:00 | posters | corrected The Cat in the Hat
+2026-11-01T11:52:49.125256-07:00 | posters | corrected Verity
+2026-11-01T11:52:49.637479-07:00 | ntfy | sent (HTTP 200)
+2026-11-01T11:52:49.638098-07:00 | ok | 11 Tuesdays | 48 showtimes | +3 -0 vs notified | errors=0
+2026-11-01T11:52:49.638133-07:00 | gist | skipped on GitHub Actions (board reads repo file)
