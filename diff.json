@@ -1,22 +1,6 @@
 {
-  "checked_at": "2026-11-01T11:49:47.064215-07:00",
-  "new_or_changed": [
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero",
-      "time": "10:15 PM"
-    },
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero",
-      "time": "4:00 PM"
-    },
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "The Cat in the Hat",
-      "time": "7:15 PM"
-    }
-  ],
+  "checked_at": "2026-11-02T15:40:25.325075-07:00",
+  "new_or_changed": [],
   "removed": [],
   "now_on_sale": [],
   "no_longer_on_sale": []
