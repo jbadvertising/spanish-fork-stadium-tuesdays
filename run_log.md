@@ -151,3 +151,6 @@
 2026-11-02T15:43:26.273993-07:00 | posters | corrected Wildwood
 2026-11-02T15:43:26.295878-07:00 | ok | 11 Tuesdays | 48 showtimes | +0 -0 vs notified | errors=0
 2026-11-02T15:43:26.295907-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-03T13:30:41.584617-07:00 | posters | corrected Resident Evil
+2026-11-03T13:30:41.734926-07:00 | ok | 11 Tuesdays | 48 showtimes | +0 -0 vs notified | errors=0
+2026-11-03T13:30:41.734980-07:00 | gist | skipped on GitHub Actions (board reads repo file)
