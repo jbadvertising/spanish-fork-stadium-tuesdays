@@ -154,3 +154,9 @@
 2026-11-03T13:30:41.584617-07:00 | posters | corrected Resident Evil
 2026-11-03T13:30:41.734926-07:00 | ok | 11 Tuesdays | 48 showtimes | +0 -0 vs notified | errors=0
 2026-11-03T13:30:41.734980-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-04T13:46:09.771610-07:00 | posters | corrected Avengers: Doomsday
+2026-11-04T13:46:10.256131-07:00 | posters | backfilled Ebenezer
+2026-11-04T13:46:10.341652-07:00 | posters | backfilled Focker In-Law
+2026-11-04T13:46:11.383515-07:00 | ntfy | sent (HTTP 200)
+2026-11-04T13:46:11.384287-07:00 | ok | 12 Tuesdays | 52 showtimes | +4 -0 vs notified | errors=0
+2026-11-04T13:46:11.384325-07:00 | gist | skipped on GitHub Actions (board reads repo file)
