@@ -160,3 +160,8 @@
 2026-11-04T13:46:11.383515-07:00 | ntfy | sent (HTTP 200)
 2026-11-04T13:46:11.384287-07:00 | ok | 12 Tuesdays | 52 showtimes | +4 -0 vs notified | errors=0
 2026-11-04T13:46:11.384325-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-05T14:01:34.473977-07:00 | posters | Godzilla Minus Zero (Japanese with English Subtitles): no confident TMDB match
+2026-11-05T14:01:35.003085-07:00 | posters | corrected Wildwood
+2026-11-05T14:01:35.251090-07:00 | ntfy | sent (HTTP 200)
+2026-11-05T14:01:35.251790-07:00 | ok | 12 Tuesdays | 52 showtimes | +4 -4 vs notified | errors=0
+2026-11-05T14:01:35.251825-07:00 | gist | skipped on GitHub Actions (board reads repo file)

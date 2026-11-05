@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-04T13:43:10.527987-07:00",
+  "checked_at": "2026-11-05T13:58:41.246618-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -194,7 +194,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:27:23.274547-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/8g7q6o54WfKWRmUQ0Ye8OskevUY.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg"
         },
         {
           "movie": "Clayface",
@@ -245,7 +245,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-28T13:25:42.317523-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/8g7q6o54WfKWRmUQ0Ye8OskevUY.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg"
         },
         {
           "movie": "Clayface",
@@ -263,7 +263,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-28T13:25:42.317523-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/8g7q6o54WfKWRmUQ0Ye8OskevUY.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg"
         },
         {
           "movie": "Clayface",
@@ -308,22 +308,22 @@
           "poster": "https://image.tmdb.org/t/p/w500/tYH4rQZlHtuFSeDS0bsV17khvJC.jpg"
         },
         {
-          "movie": "Godzilla Minus Zero",
+          "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
           "time": "4:00 PM",
           "iso": "2026-11-10T16:00:00-07:00",
           "sale_status": "on_sale",
           "auditorium": "10/11",
-          "first_seen": "2026-11-01T11:49:47.064215-07:00",
-          "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
+          "first_seen": "2026-11-05T13:58:41.246618-07:00",
+          "poster": null
         },
         {
-          "movie": "Godzilla Minus Zero",
+          "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
           "time": "6:30 PM",
           "iso": "2026-11-10T18:30:00-07:00",
           "sale_status": "on_sale",
           "auditorium": "10/11",
-          "first_seen": "2026-10-03T07:50:04.868464-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
+          "first_seen": "2026-11-05T13:58:41.246618-07:00",
+          "poster": null
         },
         {
           "movie": "The Cat in the Hat",
@@ -335,22 +335,22 @@
           "poster": "https://image.tmdb.org/t/p/w500/tYH4rQZlHtuFSeDS0bsV17khvJC.jpg"
         },
         {
-          "movie": "Godzilla Minus Zero",
+          "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
           "time": "9:45 PM",
           "iso": "2026-11-10T21:45:00-07:00",
           "sale_status": "on_sale",
           "auditorium": "10/11",
-          "first_seen": "2026-10-03T07:50:04.868464-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
+          "first_seen": "2026-11-05T13:58:41.246618-07:00",
+          "poster": null
         },
         {
-          "movie": "Godzilla Minus Zero",
+          "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
           "time": "10:15 PM",
           "iso": "2026-11-10T22:15:00-07:00",
           "sale_status": "on_sale",
           "auditorium": "10/11",
-          "first_seen": "2026-11-01T11:49:47.064215-07:00",
-          "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
+          "first_seen": "2026-11-05T13:58:41.246618-07:00",
+          "poster": null
         }
       ],
       "count": 6
@@ -419,7 +419,7 @@
           "movie": "Focker In-Law",
           "time": "4:00 PM",
           "iso": "2026-12-01T16:00:00-07:00",
-          "sale_status": "presale",
+          "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-04T13:43:10.527987-07:00",
           "poster": "https://image.tmdb.org/t/p/w500/gPdzdeehaoaYqxH2rA6yayEDSsS.jpg"
