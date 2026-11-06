@@ -1,55 +1,7 @@
 {
-  "checked_at": "2026-11-05T13:58:41.246618-07:00",
-  "new_or_changed": [
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
-      "time": "10:15 PM"
-    },
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
-      "time": "4:00 PM"
-    },
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
-      "time": "6:30 PM"
-    },
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
-      "time": "9:45 PM"
-    }
-  ],
-  "removed": [
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero",
-      "time": "10:15 PM"
-    },
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero",
-      "time": "4:00 PM"
-    },
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero",
-      "time": "6:30 PM"
-    },
-    {
-      "tuesday_date": "2026-11-10",
-      "movie": "Godzilla Minus Zero",
-      "time": "9:45 PM"
-    }
-  ],
-  "now_on_sale": [
-    {
-      "tuesday_date": "2026-12-01",
-      "movie": "Focker In-Law",
-      "time": "4:00 PM"
-    }
-  ],
+  "checked_at": "2026-11-06T13:19:55.865285-07:00",
+  "new_or_changed": [],
+  "removed": [],
+  "now_on_sale": [],
   "no_longer_on_sale": []
 }
