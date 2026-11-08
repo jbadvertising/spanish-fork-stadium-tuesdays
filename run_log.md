@@ -172,3 +172,9 @@
 2026-11-07T11:39:32.637809-07:00 | posters | corrected The Cat in the Hat
 2026-11-07T11:39:33.014847-07:00 | ok | 12 Tuesdays | 52 showtimes | +0 -0 vs notified | errors=0
 2026-11-07T11:39:33.014943-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-08T11:47:03.167615-07:00 | posters | corrected Avengers: Doomsday
+2026-11-08T11:47:03.317546-07:00 | posters | Godzilla Minus Zero (Japanese with English Subtitles): no confident TMDB match
+2026-11-08T11:47:03.469338-07:00 | posters | backfilled Violent Night 2
+2026-11-08T11:47:04.680809-07:00 | ntfy | sent (HTTP 200)
+2026-11-08T11:47:04.681690-07:00 | ok | 13 Tuesdays | 55 showtimes | +3 -0 vs notified | errors=0
+2026-11-08T11:47:04.681768-07:00 | gist | skipped on GitHub Actions (board reads repo file)

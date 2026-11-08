@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-07T11:36:43.953092-07:00",
+  "checked_at": "2026-11-08T11:44:10.139213-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -446,6 +446,39 @@
       "count": 3
     },
     {
+      "tuesday_date": "2026-12-08",
+      "showtimes": [
+        {
+          "movie": "Violent Night 2",
+          "time": "4:10 PM",
+          "iso": "2026-12-08T16:10:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-11-08T11:44:10.139213-07:00",
+          "poster": "https://image.tmdb.org/t/p/w500/7HPvgItDw9NgW3iy4tFRRuGNbuN.jpg"
+        },
+        {
+          "movie": "Violent Night 2",
+          "time": "7:00 PM",
+          "iso": "2026-12-08T19:00:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-11-08T11:44:10.139213-07:00",
+          "poster": "https://image.tmdb.org/t/p/w500/7HPvgItDw9NgW3iy4tFRRuGNbuN.jpg"
+        },
+        {
+          "movie": "Violent Night 2",
+          "time": "9:50 PM",
+          "iso": "2026-12-08T21:50:00-07:00",
+          "sale_status": "presale",
+          "auditorium": "10/11",
+          "first_seen": "2026-11-08T11:44:10.139213-07:00",
+          "poster": "https://image.tmdb.org/t/p/w500/7HPvgItDw9NgW3iy4tFRRuGNbuN.jpg"
+        }
+      ],
+      "count": 3
+    },
+    {
       "tuesday_date": "2026-12-15",
       "showtimes": [
         {
@@ -479,7 +512,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/9jlZ59UALLLOE279HMT19rP9XQs.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -521,7 +554,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/9jlZ59UALLLOE279HMT19rP9XQs.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -545,7 +578,7 @@
       "count": 4
     }
   ],
-  "total_tuesdays": 12,
-  "total_showtimes": 52,
+  "total_tuesdays": 13,
+  "total_showtimes": 55,
   "errors": []
 }
