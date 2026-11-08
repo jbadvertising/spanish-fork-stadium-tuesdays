@@ -34,8 +34,17 @@ page's offer availability (PreOrder = tickets not yet on sale). Flips
 from presale to on_sale are reported as "now_on_sale" in diff.json so
 the user hears when tickets open up.
 
+theater edits: the board rebuilds from live Cinemark data every run,
+so a retime, a re-billing, or a pulled screening is reflected with
+no manual work. The diff accounts for the edit: a screening whose
+billing changed but kept its date and time is reported as "renamed"
+(same screening, not a removal plus a new showtime); anything that
+actually disappeared is reported as "removed".
+
 notifications: the script pushes alerts itself to ntfy (the user reads
-them in the ntfy phone app instead of chat messages). Topic comes from
+them in the ntfy phone app instead of chat messages). NEW, ON SALE,
+RENAMED, and REMOVED lines all push; only a reverse sale-status flip
+(on_sale back to presale) stays silent. Topic comes from
 the CINEMARK_NTFY_TOPIC env var, or the first line of ntfy_topic.txt.
 The last_notified.json baseline advances only after a successful ntfy
 send; a failed or unconfigured send leaves the baseline untouched so
@@ -378,6 +387,30 @@ def send_ntfy(title, message):
     except Exception as e:
         return False, f"send failed: {type(e).__name__}: {e}"
 
+def detect_renames(removed, new):
+    """Pair up removed/new showtimes that are the same screening retitled.
+
+    Cinemark sometimes re-bills a film (e.g. adds "(Japanese with
+    English Subtitles)") without changing the screening. Same date +
+    same time, with one title containing the other after
+    normalization, is that screening — not a removal plus a new
+    showtime. Returns (renamed, remaining_removed, remaining_new),
+    where renamed is [(date, old_movie, new_movie, time), ...].
+    """
+    renamed = []
+    rem = list(removed)
+    add = list(new)
+    for r in removed:
+        for n in list(add):
+            if r[0] == n[0] and r[2] == n[2]:
+                rn, nn = norm_title(r[1]), norm_title(n[1])
+                if rn in nn or nn in rn:
+                    renamed.append((r[0], r[1], n[1], r[2]))
+                    rem.remove(r)
+                    add.remove(n)
+                    break
+    return sorted(renamed), sorted(rem), sorted(add)
+
 def main():
     os.makedirs(WORKSPACE, exist_ok=True)
     checked_at = datetime.now(DENVER).isoformat()
@@ -475,6 +508,8 @@ def main():
                for d in tuesdays_out for s in d["showtimes"]}
     new = sorted(cur_set - base_set)
     removed = sorted(base_set - cur_set)
+    # same screening, new billing: a rename, not a removal + a new showtime
+    renamed, removed, new = detect_renames(removed, new)
     # sale-status flips: only when the baseline already recorded a status
     # (entries predating the sale_status field can't flip yet).
     base_status = {(d["tuesday_date"], s["movie"], s["time"]): s.get("sale_status")
@@ -494,6 +529,8 @@ def main():
     diff = {"checked_at": checked_at,
             "new_or_changed": [entry(t, m, ti) for (t, m, ti) in new],
             "removed": [entry(t, m, ti) for (t, m, ti) in removed],
+            "renamed": [{"tuesday_date": t, "old_movie": o, "movie": m, "time": ti}
+                        for (t, o, m, ti) in renamed],
             "now_on_sale": [entry(t, m, ti) for (t, m, ti) in now_on_sale],
             "no_longer_on_sale": [entry(t, m, ti) for (t, m, ti) in no_longer_on_sale]}
     atomic_write(DIFF_JSON, diff)
@@ -508,6 +545,10 @@ def main():
         notify_lines.append(f"NEW  {t}  {m} at {ti}")
     for (t, m, ti) in now_on_sale:
         notify_lines.append(f"ON SALE  {t}  {m} at {ti}")
+    for (t, old, m, ti) in renamed:
+        notify_lines.append(f"RENAMED  {t}  {old} at {ti} -> {m}")
+    for (t, m, ti) in removed:
+        notify_lines.append(f"REMOVED  {t}  {m} at {ti}")
     if notify_lines:
         ok, ntfy_status = send_ntfy("Cinemark Tuesday showtimes",
                                      "\n".join(notify_lines))
@@ -515,18 +556,19 @@ def main():
         print(f"ntfy: {ntfy_status}")
         if ok:
             atomic_write(NOTIFIED_JSON, output)  # user has been told
-    elif removed or no_longer_on_sale:
+    elif no_longer_on_sale:
         # nothing worth a push, but the baseline must still move on
         atomic_write(NOTIFIED_JSON, output)
 
     log_run(f"ok | {len(tuesdays_out)} Tuesdays | "
             f"{output['total_showtimes']} showtimes | "
-            f"+{len(new)} -{len(removed)} vs notified | errors={len(errors)}")
+            f"+{len(new)} -{len(removed)} ~{len(renamed)} vs notified | errors={len(errors)}")
     gist_status = sync_gist_board()
     log_run(f"gist | {gist_status}")
     print(f"Gist: {gist_status}")
     print(f"\nDone: {len(tuesdays_out)} Tuesdays, {output['total_showtimes']} showtimes")
     print(f"New/changed vs last notified: {len(new)}, removed: {len(removed)}, "
+          f"renamed: {len(renamed)}, "
           f"now on sale: {len(now_on_sale)}, no longer on sale: {len(no_longer_on_sale)}")
     if errors:
         print(f"Fetch errors: {len(errors)} (previous data kept, marked stale)")
