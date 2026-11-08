@@ -178,3 +178,6 @@
 2026-11-08T11:47:04.680809-07:00 | ntfy | sent (HTTP 200)
 2026-11-08T11:47:04.681690-07:00 | ok | 13 Tuesdays | 55 showtimes | +3 -0 vs notified | errors=0
 2026-11-08T11:47:04.681768-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-08T12:06:45.993156-07:00 | posters | backfilled Godzilla Minus Zero (Japanese with English Subtitles)
+2026-11-08T12:06:46.830788-07:00 | ok | 13 Tuesdays | 55 showtimes | +0 -0 vs notified | errors=0
+2026-11-08T12:06:46.830842-07:00 | gist | skipped on GitHub Actions (board reads repo file)

@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-08T11:44:10.139213-07:00",
+  "checked_at": "2026-11-08T12:03:44.593776-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -314,7 +314,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-05T13:58:41.246618-07:00",
-          "poster": null
+          "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
         },
         {
           "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
@@ -323,7 +323,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-05T13:58:41.246618-07:00",
-          "poster": null
+          "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
         },
         {
           "movie": "The Cat in the Hat",
@@ -341,7 +341,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-05T13:58:41.246618-07:00",
-          "poster": null
+          "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
         },
         {
           "movie": "Godzilla Minus Zero (Japanese with English Subtitles)",
@@ -350,7 +350,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-05T13:58:41.246618-07:00",
-          "poster": null
+          "poster": "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg"
         }
       ],
       "count": 6
