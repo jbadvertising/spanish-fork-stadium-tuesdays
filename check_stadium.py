@@ -199,8 +199,9 @@ def title_variants(movie):
 
     Cinemark's billing sometimes differs from TMDB's title (studio
     possessives like "Disney's Hexed", leading articles, screening
-    suffixes). Trying progressively simplified variants makes the
-    lookup robust with no manual title editing anywhere.
+    suffixes, trailing parentheticals). Trying progressively
+    simplified variants makes the lookup robust with no manual title
+    editing anywhere.
     """
     variants = []
 
@@ -215,6 +216,12 @@ def title_variants(movie):
     add(re.sub(r"^(the|a|an)\s+", "", base, flags=re.I))        # leading article
     add(re.sub(r"^[\w'’]+'s\s+", "",
                re.sub(r"^(the|a|an)\s+", "", base, flags=re.I)))  # both
+    # trailing parenthetical, e.g. "Godzilla Minus Zero (Japanese with
+    # English Subtitles)" -> "Godzilla Minus Zero"
+    add(re.sub(r"\s*\([^)]*\)\s*$", "", base))
+    add(re.sub(r"\s*\([^)]*\)\s*$", "",
+               re.sub(r"^[\w'’]+'s\s+", "",
+                      re.sub(r"^(the|a|an)\s+", "", base, flags=re.I))))
     add(movie)  # raw board title as a last resort
     return variants
 
