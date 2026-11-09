@@ -183,3 +183,8 @@
 2026-11-08T12:06:46.830842-07:00 | gist | skipped on GitHub Actions (board reads repo file)
 2026-11-08T13:23:41.886092-07:00 | ok | 13 Tuesdays | 55 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-08T13:23:41.886147-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-09T16:23:56.268306-07:00 | posters | corrected Avengers: Doomsday
+2026-11-09T16:23:57.337266-07:00 | posters | corrected Street Fighter
+2026-11-09T16:23:58.569860-07:00 | ntfy | sent (HTTP 200)
+2026-11-09T16:23:58.570738-07:00 | ok | 13 Tuesdays | 54 showtimes | +0 -1 ~0 vs notified | errors=0
+2026-11-09T16:23:58.570798-07:00 | gist | skipped on GitHub Actions (board reads repo file)
