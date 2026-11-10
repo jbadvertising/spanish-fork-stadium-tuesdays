@@ -1,13 +1,28 @@
 {
-  "checked_at": "2026-11-09T16:21:01.590479-07:00",
-  "new_or_changed": [],
-  "removed": [
+  "checked_at": "2026-11-10T13:44:53.810569-07:00",
+  "new_or_changed": [
     {
       "tuesday_date": "2026-11-17",
       "movie": "Ebenezer",
+      "time": "10:25 PM"
+    },
+    {
+      "tuesday_date": "2026-11-17",
+      "movie": "The Cat in the Hat",
       "time": "10:20 PM"
+    },
+    {
+      "tuesday_date": "2026-11-17",
+      "movie": "The Cat in the Hat",
+      "time": "4:45 PM"
+    },
+    {
+      "tuesday_date": "2026-11-17",
+      "movie": "The Cat in the Hat",
+      "time": "7:35 PM"
     }
   ],
+  "removed": [],
   "renamed": [],
   "now_on_sale": [],
   "no_longer_on_sale": []

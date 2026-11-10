@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-09T16:21:01.590479-07:00",
+  "checked_at": "2026-11-10T13:44:53.810569-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -368,6 +368,15 @@
           "poster": "https://image.tmdb.org/t/p/w500/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg"
         },
         {
+          "movie": "The Cat in the Hat",
+          "time": "4:45 PM",
+          "iso": "2026-11-17T16:45:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-11-10T13:44:53.810569-07:00",
+          "poster": "https://image.tmdb.org/t/p/w500/mWN6knIVJ2o7eGwSm7mOgSCwNUc.jpg"
+        },
+        {
           "movie": "Ebenezer",
           "time": "7:25 PM",
           "iso": "2026-11-17T19:25:00-07:00",
@@ -375,9 +384,36 @@
           "auditorium": "10/11",
           "first_seen": "2026-11-04T13:43:10.527987-07:00",
           "poster": "https://image.tmdb.org/t/p/w500/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg"
+        },
+        {
+          "movie": "The Cat in the Hat",
+          "time": "7:35 PM",
+          "iso": "2026-11-17T19:35:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-11-10T13:44:53.810569-07:00",
+          "poster": "https://image.tmdb.org/t/p/w500/mWN6knIVJ2o7eGwSm7mOgSCwNUc.jpg"
+        },
+        {
+          "movie": "The Cat in the Hat",
+          "time": "10:20 PM",
+          "iso": "2026-11-17T22:20:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-11-10T13:44:53.810569-07:00",
+          "poster": "https://image.tmdb.org/t/p/w500/mWN6knIVJ2o7eGwSm7mOgSCwNUc.jpg"
+        },
+        {
+          "movie": "Ebenezer",
+          "time": "10:25 PM",
+          "iso": "2026-11-17T22:25:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-11-10T13:44:53.810569-07:00",
+          "poster": "https://image.tmdb.org/t/p/w500/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg"
         }
       ],
-      "count": 2
+      "count": 6
     },
     {
       "tuesday_date": "2026-11-24",
@@ -389,7 +425,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg"
         },
         {
           "movie": "The Hunger Games: Sunrise on the Reaping",
@@ -398,7 +434,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg"
         }
       ],
       "count": 2
@@ -422,7 +458,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg"
         },
         {
           "movie": "The Hunger Games: Sunrise on the Reaping",
@@ -431,7 +467,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg"
         }
       ],
       "count": 3
@@ -570,6 +606,6 @@
     }
   ],
   "total_tuesdays": 13,
-  "total_showtimes": 54,
+  "total_showtimes": 58,
   "errors": []
 }

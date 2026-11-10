@@ -188,3 +188,7 @@
 2026-11-09T16:23:58.569860-07:00 | ntfy | sent (HTTP 200)
 2026-11-09T16:23:58.570738-07:00 | ok | 13 Tuesdays | 54 showtimes | +0 -1 ~0 vs notified | errors=0
 2026-11-09T16:23:58.570798-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-10T13:47:54.569678-07:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
+2026-11-10T13:47:54.796227-07:00 | ntfy | sent (HTTP 200)
+2026-11-10T13:47:54.797082-07:00 | ok | 13 Tuesdays | 58 showtimes | +4 -0 ~0 vs notified | errors=0
+2026-11-10T13:47:54.797127-07:00 | gist | skipped on GitHub Actions (board reads repo file)
