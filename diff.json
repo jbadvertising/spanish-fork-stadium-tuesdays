@@ -1,8 +1,24 @@
 {
-  "checked_at": "2026-11-11T14:11:52.149775-07:00",
+  "checked_at": "2026-11-12T14:24:08.492694-07:00",
   "new_or_changed": [],
   "removed": [],
   "renamed": [],
-  "now_on_sale": [],
+  "now_on_sale": [
+    {
+      "tuesday_date": "2026-12-08",
+      "movie": "Violent Night 2",
+      "time": "4:10 PM"
+    },
+    {
+      "tuesday_date": "2026-12-08",
+      "movie": "Violent Night 2",
+      "time": "7:00 PM"
+    },
+    {
+      "tuesday_date": "2026-12-08",
+      "movie": "Violent Night 2",
+      "time": "9:50 PM"
+    }
+  ],
   "no_longer_on_sale": []
 }

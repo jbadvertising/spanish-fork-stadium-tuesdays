@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-11T14:11:52.149775-07:00",
+  "checked_at": "2026-11-12T14:24:08.492694-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -83,7 +83,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-06T07:50:05.137567-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/kNxRgcTeqeU5jauBackTERoO2De.jpg"
         },
         {
           "movie": "Verity",
@@ -101,7 +101,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-02T09:45:44.110274-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/kNxRgcTeqeU5jauBackTERoO2De.jpg"
         },
         {
           "movie": "Other Mommy",
@@ -110,7 +110,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-02T09:45:44.110274-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/kNxRgcTeqeU5jauBackTERoO2De.jpg"
         },
         {
           "movie": "Other Mommy",
@@ -119,7 +119,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-06T07:50:05.137567-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/kNxRgcTeqeU5jauBackTERoO2De.jpg"
         }
       ],
       "count": 6
@@ -365,7 +365,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-04T13:43:10.527987-07:00",
-          "poster": "https://image.tmdb.org/t/p/w500/wbTHJ5VzOjEq02PYHkLAL7yhhBn.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg"
         },
         {
           "movie": "The Cat in the Hat",
@@ -383,7 +383,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-04T13:43:10.527987-07:00",
-          "poster": "https://image.tmdb.org/t/p/w500/wbTHJ5VzOjEq02PYHkLAL7yhhBn.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg"
         },
         {
           "movie": "The Cat in the Hat",
@@ -410,7 +410,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-10T13:44:53.810569-07:00",
-          "poster": "https://image.tmdb.org/t/p/w500/wbTHJ5VzOjEq02PYHkLAL7yhhBn.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg"
         }
       ],
       "count": 6
@@ -479,7 +479,7 @@
           "movie": "Violent Night 2",
           "time": "4:10 PM",
           "iso": "2026-12-08T16:10:00-07:00",
-          "sale_status": "presale",
+          "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-08T11:44:10.139213-07:00",
           "poster": "https://image.tmdb.org/t/p/w500/7HPvgItDw9NgW3iy4tFRRuGNbuN.jpg"
@@ -488,7 +488,7 @@
           "movie": "Violent Night 2",
           "time": "7:00 PM",
           "iso": "2026-12-08T19:00:00-07:00",
-          "sale_status": "presale",
+          "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-08T11:44:10.139213-07:00",
           "poster": "https://image.tmdb.org/t/p/w500/7HPvgItDw9NgW3iy4tFRRuGNbuN.jpg"
@@ -497,7 +497,7 @@
           "movie": "Violent Night 2",
           "time": "9:50 PM",
           "iso": "2026-12-08T21:50:00-07:00",
-          "sale_status": "presale",
+          "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-08T11:44:10.139213-07:00",
           "poster": "https://image.tmdb.org/t/p/w500/7HPvgItDw9NgW3iy4tFRRuGNbuN.jpg"
@@ -539,7 +539,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/tTMmREfhVd51CCg7GN73wL8cIoT.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -581,7 +581,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/tTMmREfhVd51CCg7GN73wL8cIoT.jpg"
         },
         {
           "movie": "Dune: Part Three",

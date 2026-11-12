@@ -197,3 +197,9 @@
 2026-11-11T14:14:56.698920-07:00 | posters | corrected Street Fighter
 2026-11-11T14:14:57.272924-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-11T14:14:57.272994-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-12T14:27:29.846183-07:00 | posters | corrected Avengers: Doomsday
+2026-11-12T14:27:29.943773-07:00 | posters | corrected Ebenezer
+2026-11-12T14:27:30.024958-07:00 | posters | corrected Other Mommy
+2026-11-12T14:27:30.273828-07:00 | ntfy | sent (HTTP 200)
+2026-11-12T14:27:30.274689-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
+2026-11-12T14:27:30.274747-07:00 | gist | skipped on GitHub Actions (board reads repo file)
