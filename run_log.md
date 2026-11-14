@@ -207,3 +207,6 @@
 2026-11-13T13:52:31.031390-07:00 | posters | corrected Other Mommy
 2026-11-13T13:52:31.324368-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-13T13:52:31.324436-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-14T12:03:57.492453-07:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
+2026-11-14T12:03:57.901845-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
+2026-11-14T12:03:57.901902-07:00 | gist | skipped on GitHub Actions (board reads repo file)
