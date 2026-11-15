@@ -210,3 +210,7 @@
 2026-11-14T12:03:57.492453-07:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
 2026-11-14T12:03:57.901845-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-14T12:03:57.901902-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-15T12:42:57.671162-07:00 | posters | corrected Avengers: Doomsday
+2026-11-15T12:42:57.933151-07:00 | posters | corrected Street Fighter
+2026-11-15T12:42:58.411481-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
+2026-11-15T12:42:58.411548-07:00 | gist | skipped on GitHub Actions (board reads repo file)
