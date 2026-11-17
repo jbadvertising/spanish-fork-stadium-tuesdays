@@ -216,3 +216,8 @@
 2026-11-15T12:42:58.411548-07:00 | gist | skipped on GitHub Actions (board reads repo file)
 2026-11-16T16:19:40.441816-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-16T16:19:40.441884-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-17T15:11:31.967405-07:00 | posters | corrected Dune: Part Three
+2026-11-17T15:11:31.989746-07:00 | posters | corrected Dune: Part Three Insider Screenings
+2026-11-17T15:11:32.052731-07:00 | posters | corrected Focker In-Law
+2026-11-17T15:11:32.445994-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
+2026-11-17T15:11:32.446047-07:00 | gist | skipped on GitHub Actions (board reads repo file)
