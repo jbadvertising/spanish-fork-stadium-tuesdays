@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-17T15:08:06.232948-07:00",
+  "checked_at": "2026-11-18T14:46:01.990314-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -143,7 +143,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/8nP4lF51Ea861YfHEEqhZBLYv3e.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/ccxdepKqORLwccbzvO4eAGkN0IC.jpg"
         },
         {
           "movie": "Whalefall",
@@ -161,7 +161,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/8nP4lF51Ea861YfHEEqhZBLYv3e.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/ccxdepKqORLwccbzvO4eAGkN0IC.jpg"
         },
         {
           "movie": "Street Fighter",
@@ -170,7 +170,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-14T07:50:40.691553-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/8nP4lF51Ea861YfHEEqhZBLYv3e.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/ccxdepKqORLwccbzvO4eAGkN0IC.jpg"
         },
         {
           "movie": "Street Fighter",
@@ -179,7 +179,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/8nP4lF51Ea861YfHEEqhZBLYv3e.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/ccxdepKqORLwccbzvO4eAGkN0IC.jpg"
         }
       ],
       "count": 6
@@ -425,7 +425,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg"
         },
         {
           "movie": "The Hunger Games: Sunrise on the Reaping",
@@ -434,7 +434,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg"
         }
       ],
       "count": 2
@@ -458,7 +458,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg"
         },
         {
           "movie": "The Hunger Games: Sunrise on the Reaping",
@@ -467,7 +467,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-26T19:12:24.073185-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg"
         }
       ],
       "count": 3
@@ -539,7 +539,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/1zqWkLwC1zLBBBtIWzmkmWeMWnT.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -581,7 +581,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/1zqWkLwC1zLBBBtIWzmkmWeMWnT.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg"
         },
         {
           "movie": "Dune: Part Three",

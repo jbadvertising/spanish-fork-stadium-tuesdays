@@ -221,3 +221,8 @@
 2026-11-17T15:11:32.052731-07:00 | posters | corrected Focker In-Law
 2026-11-17T15:11:32.445994-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-17T15:11:32.446047-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-18T14:49:03.964692-07:00 | posters | corrected Avengers: Doomsday
+2026-11-18T14:49:05.037471-07:00 | posters | corrected Street Fighter
+2026-11-18T14:49:05.228358-07:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
+2026-11-18T14:49:05.745573-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
+2026-11-18T14:49:05.745642-07:00 | gist | skipped on GitHub Actions (board reads repo file)
