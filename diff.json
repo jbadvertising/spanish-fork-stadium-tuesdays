@@ -1,6 +1,12 @@
 {
-  "checked_at": "2026-11-18T14:46:01.990314-07:00",
-  "new_or_changed": [],
+  "checked_at": "2026-11-19T15:03:23.320604-07:00",
+  "new_or_changed": [
+    {
+      "tuesday_date": "2026-12-15",
+      "movie": "Dune: Part Three Insider Screenings",
+      "time": "9:35 PM"
+    }
+  ],
   "removed": [],
   "renamed": [],
   "now_on_sale": [],

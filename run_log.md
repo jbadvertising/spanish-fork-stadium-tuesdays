@@ -226,3 +226,9 @@
 2026-11-18T14:49:05.228358-07:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
 2026-11-18T14:49:05.745573-07:00 | ok | 13 Tuesdays | 58 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-18T14:49:05.745642-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-19T15:07:10.414835-07:00 | posters | corrected Avengers: Doomsday
+2026-11-19T15:07:10.701654-07:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
+2026-11-19T15:07:11.326581-07:00 | posters | corrected You Can See Everything
+2026-11-19T15:07:11.528890-07:00 | ntfy | sent (HTTP 200)
+2026-11-19T15:07:11.529886-07:00 | ok | 13 Tuesdays | 59 showtimes | +1 -0 ~0 vs notified | errors=0
+2026-11-19T15:07:11.529955-07:00 | gist | skipped on GitHub Actions (board reads repo file)
