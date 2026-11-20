@@ -232,3 +232,8 @@
 2026-11-19T15:07:11.528890-07:00 | ntfy | sent (HTTP 200)
 2026-11-19T15:07:11.529886-07:00 | ok | 13 Tuesdays | 59 showtimes | +1 -0 ~0 vs notified | errors=0
 2026-11-19T15:07:11.529955-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-20T14:46:59.697892-07:00 | posters | corrected Disney's Hexed
+2026-11-20T14:47:00.413574-07:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
+2026-11-20T14:47:00.915465-07:00 | ntfy | sent (HTTP 200)
+2026-11-20T14:47:00.916064-07:00 | ok | 13 Tuesdays | 61 showtimes | +2 -0 ~0 vs notified | errors=0
+2026-11-20T14:47:00.916114-07:00 | gist | skipped on GitHub Actions (board reads repo file)
