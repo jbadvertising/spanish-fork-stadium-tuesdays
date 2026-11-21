@@ -237,3 +237,8 @@
 2026-11-20T14:47:00.915465-07:00 | ntfy | sent (HTTP 200)
 2026-11-20T14:47:00.916064-07:00 | ok | 13 Tuesdays | 61 showtimes | +2 -0 ~0 vs notified | errors=0
 2026-11-20T14:47:00.916114-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-21T13:29:15.010448-07:00 | posters | corrected Avengers: Doomsday
+2026-11-21T13:29:15.075589-07:00 | posters | corrected Dune: Part Three
+2026-11-21T13:29:15.081363-07:00 | posters | corrected Dune: Part Three Insider Screenings
+2026-11-21T13:29:15.301009-07:00 | ok | 13 Tuesdays | 61 showtimes | +0 -0 ~0 vs notified | errors=0
+2026-11-21T13:29:15.301039-07:00 | gist | skipped on GitHub Actions (board reads repo file)
