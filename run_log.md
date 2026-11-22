@@ -242,3 +242,8 @@
 2026-11-21T13:29:15.081363-07:00 | posters | corrected Dune: Part Three Insider Screenings
 2026-11-21T13:29:15.301009-07:00 | ok | 13 Tuesdays | 61 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-21T13:29:15.301039-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-22T13:41:10.887076-07:00 | posters | corrected Avengers: Doomsday
+2026-11-22T13:41:11.097443-07:00 | posters | corrected Dune: Part Three
+2026-11-22T13:41:11.107151-07:00 | posters | corrected Dune: Part Three Insider Screenings
+2026-11-22T13:41:11.676845-07:00 | ok | 13 Tuesdays | 61 showtimes | +0 -0 ~0 vs notified | errors=0
+2026-11-22T13:41:11.676911-07:00 | gist | skipped on GitHub Actions (board reads repo file)

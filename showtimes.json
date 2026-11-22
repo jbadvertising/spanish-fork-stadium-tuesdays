@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-21T13:26:20.213212-07:00",
+  "checked_at": "2026-11-22T13:38:16.900427-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -533,7 +533,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/6ODf9xMLsaOSK9tC4Ter8H1Bjsq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/gknAq4pAuToh1Aq5CJfVkGQkExT.jpg"
         },
         {
           "movie": "Dune: Part Three Insider Screenings",
@@ -542,7 +542,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-11-19T15:03:23.320604-07:00",
-          "poster": "https://image.tmdb.org/t/p/w500/6ODf9xMLsaOSK9tC4Ter8H1Bjsq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/gknAq4pAuToh1Aq5CJfVkGQkExT.jpg"
         }
       ],
       "count": 2
@@ -557,7 +557,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:27:23.274547-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/6ODf9xMLsaOSK9tC4Ter8H1Bjsq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/gknAq4pAuToh1Aq5CJfVkGQkExT.jpg"
         },
         {
           "movie": "Avengers: Doomsday",
@@ -566,7 +566,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/cWXtJhrlruF8CeYuaBGE8vdj3Q9.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -575,7 +575,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/6ODf9xMLsaOSK9tC4Ter8H1Bjsq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/gknAq4pAuToh1Aq5CJfVkGQkExT.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -584,7 +584,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/6ODf9xMLsaOSK9tC4Ter8H1Bjsq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/gknAq4pAuToh1Aq5CJfVkGQkExT.jpg"
         }
       ],
       "count": 4
@@ -599,7 +599,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-20T10:27:23.274547-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/6ODf9xMLsaOSK9tC4Ter8H1Bjsq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/gknAq4pAuToh1Aq5CJfVkGQkExT.jpg"
         },
         {
           "movie": "Avengers: Doomsday",
@@ -608,7 +608,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/zHTxblqPcqRpA93ex2Hj0RdpVBs.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/cWXtJhrlruF8CeYuaBGE8vdj3Q9.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -617,7 +617,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/6ODf9xMLsaOSK9tC4Ter8H1Bjsq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/gknAq4pAuToh1Aq5CJfVkGQkExT.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -626,7 +626,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/6ODf9xMLsaOSK9tC4Ter8H1Bjsq.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/gknAq4pAuToh1Aq5CJfVkGQkExT.jpg"
         }
       ],
       "count": 4
