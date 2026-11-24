@@ -1,6 +1,12 @@
 {
-  "checked_at": "2026-11-22T13:38:16.900427-07:00",
-  "new_or_changed": [],
+  "checked_at": "2026-11-23T18:34:26.361883-07:00",
+  "new_or_changed": [
+    {
+      "tuesday_date": "2026-11-24",
+      "movie": "The Hunger Games: Sunrise on the Reaping",
+      "time": "8:25 PM"
+    }
+  ],
   "removed": [],
   "renamed": [],
   "now_on_sale": [],

@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-22T13:38:16.900427-07:00",
+  "checked_at": "2026-11-23T18:34:26.361883-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -429,6 +429,15 @@
         },
         {
           "movie": "The Hunger Games: Sunrise on the Reaping",
+          "time": "8:25 PM",
+          "iso": "2026-11-24T20:25:00-07:00",
+          "sale_status": "on_sale",
+          "auditorium": "10/11",
+          "first_seen": "2026-11-23T18:34:26.361883-07:00",
+          "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
+        },
+        {
+          "movie": "The Hunger Games: Sunrise on the Reaping",
           "time": "10:10 PM",
           "iso": "2026-11-24T22:10:00-07:00",
           "sale_status": "on_sale",
@@ -437,7 +446,7 @@
           "poster": "https://image.tmdb.org/t/p/w500/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg"
         }
       ],
-      "count": 2
+      "count": 3
     },
     {
       "tuesday_date": "2026-12-01",
@@ -566,7 +575,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/cWXtJhrlruF8CeYuaBGE8vdj3Q9.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/1zqWkLwC1zLBBBtIWzmkmWeMWnT.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -608,7 +617,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/cWXtJhrlruF8CeYuaBGE8vdj3Q9.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/1zqWkLwC1zLBBBtIWzmkmWeMWnT.jpg"
         },
         {
           "movie": "Dune: Part Three",
@@ -633,6 +642,6 @@
     }
   ],
   "total_tuesdays": 13,
-  "total_showtimes": 61,
+  "total_showtimes": 62,
   "errors": []
 }
