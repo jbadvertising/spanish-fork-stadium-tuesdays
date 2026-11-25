@@ -255,3 +255,6 @@
 2026-11-24T16:29:19.519648-07:00 | posters | corrected Dune: Part Three Insider Screenings
 2026-11-24T16:29:20.597487-07:00 | ok | 13 Tuesdays | 62 showtimes | +0 -0 ~0 vs notified | errors=0
 2026-11-24T16:29:20.597536-07:00 | gist | skipped on GitHub Actions (board reads repo file)
+2026-11-25T16:02:51.849846-07:00 | posters | corrected The Hunger Games: Sunrise on the Reaping
+2026-11-25T16:02:52.311722-07:00 | ok | 13 Tuesdays | 62 showtimes | +0 -0 ~0 vs notified | errors=0
+2026-11-25T16:02:52.311789-07:00 | gist | skipped on GitHub Actions (board reads repo file)
