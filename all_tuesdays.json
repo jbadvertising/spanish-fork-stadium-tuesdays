@@ -1,7 +1,7 @@
 {
   "theater": "Cinemark Spanish Fork and XD",
   "theater_id": "1153",
-  "checked_at": "2026-11-25T16:00:05.550372-07:00",
+  "checked_at": "2026-11-26T15:53:46.128021-07:00",
   "filter": "Tuesdays, strictly after 3:00 PM, Cinemark XD (auditoriums 10/11), no 3D",
   "tuesdays": [
     {
@@ -143,7 +143,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/ccxdepKqORLwccbzvO4eAGkN0IC.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/1r8IbJqmctfcAEw8KMmHhE63fA9.jpg"
         },
         {
           "movie": "Whalefall",
@@ -161,7 +161,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/ccxdepKqORLwccbzvO4eAGkN0IC.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/1r8IbJqmctfcAEw8KMmHhE63fA9.jpg"
         },
         {
           "movie": "Street Fighter",
@@ -170,7 +170,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-10-14T07:50:40.691553-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/ccxdepKqORLwccbzvO4eAGkN0IC.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/1r8IbJqmctfcAEw8KMmHhE63fA9.jpg"
         },
         {
           "movie": "Street Fighter",
@@ -179,7 +179,7 @@
           "sale_status": "on_sale",
           "auditorium": "10/11",
           "first_seen": "2026-09-27T23:35:21.830782-06:00",
-          "poster": "https://image.tmdb.org/t/p/w500/ccxdepKqORLwccbzvO4eAGkN0IC.jpg"
+          "poster": "https://image.tmdb.org/t/p/w500/1r8IbJqmctfcAEw8KMmHhE63fA9.jpg"
         }
       ],
       "count": 6
